@@ -1,0 +1,55 @@
+{
+    "hero": {
+        "title": "About the Company",
+        "subtitle": "About",
+        "description": "Security and privacy are essential for any home. Our fences provide both features, ensuring that your property is a quiet and protected space.",
+        "commitments": [
+            "Tel:(443) 628-9734",
+            "Location: Glen Burnie, MD 21061",
+            "08 Years of Experience",
+            "We Cover 100 Miles",
+            "100% Honesty"
+        ]
+    },
+    "information": {
+        "subtitle": "AG Fence LLC",
+        "title": "Sunday to Friday  8:00 am - 5:00 pm",
+        "description": "At AG Fencing LLC, we understand that fences are not only functional, but also design elements. We offer a variety of styles and materials so your fence fits the aesthetic of your home. When it comes to interior remodeling projects, our experts will guide you through the entire process, from planning to execution, to ensure your ideas come to life.Exterior remodeling is an effective way to increase the curb appeal of your home. From siding to porches, we're ready to transform the look of your home.",
+        "subDescription": "AG Fencing LLC is proud to be a local Glen Burnie, MD company providing exceptional services to the surrounding community. Our 8 years of experience in the fence industry has made us a leader in fence installation in Maryland. We know how to combine functionality and beauty."
+
+    },
+    "estimadetsection":{
+        "subtitle":"Get a Free Estimate",
+        "title":"Free Estimates In Glen Burnie, MD 21061",
+        "gettingtouch":"Get A Quote",
+        "barguarantee":{
+            "guarantee": {
+                "title": "guated Services",
+                "value": "100%"
+            },
+            "price": {
+                "title": "Best Price",
+                "value": "100%"
+            },
+            "professional": {
+                "title": "Professional Service",
+                "value": "100%"
+            }
+        }
+    },
+    "additionalinfo":{
+        "location": {
+            "title": "Glen Burnie, MD 21061",
+            "description": "At AG Fencing LLC, we understand that a deck is more than just an outdoor space. It is a place to relax, entertain and enjoy the outdoors."
+        },
+        "openinghours": {
+            "title": "Sunday to Friday | 8:00 am - 5:00 pm",
+            "description": "Interior remodeling can breathe new life into your home. Our professionals work with you to create interiors that reflect your style and personality."
+        },
+        "estimateinfo":{
+            "title":"FREE Estimates",
+            "description":"Exterior remodeling not only increases the aesthetics of your home, but also improves its efficiency and value. Contact us to start your exterior remodeling project."
+        }
+        
+    }
+}
