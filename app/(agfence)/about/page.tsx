@@ -40,7 +40,7 @@ export async function generateMetadata(
 
     const { aboutsections } = await getHero()
     const { seo } = aboutsections[0];
-    console.log("🚀 ~ seo:", seo)
+    /* console.log("🚀 ~ seo:", seo) */
     
     const metadataBase = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`)
 
@@ -75,7 +75,6 @@ const AGFenceAbout = async ({
     params: { slug: string };
     searchParams?: { [key: string]: string | string[] | undefined };
 }) => {
-    console.log("🚀 ~ params:", params)
 
     const { aboutsections } = await getHero();
     const { hero } = aboutsections[0];

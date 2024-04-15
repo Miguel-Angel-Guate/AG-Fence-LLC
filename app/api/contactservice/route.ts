@@ -9,8 +9,8 @@ export async function GET() {
   await connectMongoDB();
   try {
     const contactsections = await ContactSection.find(); // Using the AgfenceData model
-    console.log("🚀 ~  contactsections:", contactsections)
-    console.log('collection',Object.keys(mongoose.connection.collections));
+    /* console.log("🚀 ~  contactsections:", contactsections) */
+    /* console.log('collection',Object.keys(mongoose.connection.collections)); */
     /* console.log('Fetched data:', agfencedata); */
    return NextResponse.json({contactsections})
   } catch (error) {

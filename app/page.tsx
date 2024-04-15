@@ -37,8 +37,7 @@ export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  console.log("🚀 ~ PARAMS:", params)
-
+  
   const { agfencedata } = await getAGFenceHome()
   
   const { seo } = agfencedata[0].home;
