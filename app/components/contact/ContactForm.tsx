@@ -1,72 +1,31 @@
 'use client'
-
+import { onSubmitAgForm } from '@/app/libs/send-email';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const formFields = [
-    {
-        label: "First Name",
-        name: "name",
-        type: "text",
-        placeholder: "First name",
-        required: true,
-    },
-    {
-        label: "Email Address",
-        name: "email",
-        type: "email",
-        placeholder: "you@company.com",
-        required: true,
-    },
-    {
-        label: "Phone Number",
-        name: "phone",
-        type: "tel",
-        placeholder: "+1 (555) 000-0000",
-        required: true,
-    },
-    {
-        label: "Subject",
-        name: "subject",
-        type: "text",
-        placeholder: "Subject here",
-        required: true,
-    },
-    {
-        label: "Message",
-        name: "message",
-        type: "textarea",
-        placeholder: "Leave us a message...",
-        required: true,
-    },
-];
-const AGContactForm = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    
-    const onSubmit = async (data:any) => {
-        try {
-            const response = await fetch('/api/email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-            const responseData = await response.json();
-            if (response.ok) {
-                alert('Message sent successfully!');
-            } else {
-                alert(`Failed to send message: ${responseData.error}`);
-            }
-        } catch (error) {
-            alert('Failed to send message. Please try again later.');
-        }
+const AGContactForm = ({ formFields, formLeyends }: any) => {
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const [message, setMessage] = useState({ content: '', type: '' });
+
+    const handleSuccess = (msg:any) => {
+        setMessage({ content: msg, type: 'success' });
+        reset(); // Reset the form after successful submission
     };
+
+    const handleError = (msg:any) => {
+        setMessage({ content: msg, type: 'error' });
+    };
+
+    const handleFormSubmit = (data:any) => {
+        onSubmitAgForm(data, handleSuccess, handleError);
+    };
+
     return (
         <div className="bg-white p-6 sm:p-12">
-            <h2 className="text-2xl font-bold text-center mb-4">Send Us A Message</h2>
-            <p className="text-center mb-8">If you have any questions, send us a message. We aim to reply within 24 hours.</p>
-            <form className="max-w-2xl mx-auto" onSubmit={handleSubmit(onSubmit)}>
-                {formFields.map((field) => (
+            <h2 className="text-2xl font-bold text-center mb-4">{formLeyends?.title}</h2>
+            <p className="text-center mb-8">{formLeyends?.subtitle}</p>
+            <form className="max-w-2xl mx-auto" onSubmit={handleSubmit(handleFormSubmit)}>
+                {formFields.map((field: any) => (
                     <div key={field.name} className="flex flex-col">
                         <label htmlFor={field.name} className=" font-medium">{field.label}</label>
                         {field.type !== "textarea" ? (
@@ -86,7 +45,6 @@ const AGContactForm = () => {
                                 className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ringring-green-500"
                             />
                         )}
-                        {/* Show errors for each field if any */}
                         {errors[field.name] && <span className="text-red-500">{field.label} is required.</span>}
                     </div>
                 ))}
@@ -94,9 +52,14 @@ const AGContactForm = () => {
                     type="submit"
                     className="w-full bg-green-600 text-white py-3 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
-                    Send Message
+                    {formLeyends?.button}
                 </button>
             </form>
+            {message.content && (
+                <div className={`mb-4 p-4 text-sm text-center rounded-md ${message.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                    {message?.content}
+                </div>
+            )}
         </div>
     );
 }

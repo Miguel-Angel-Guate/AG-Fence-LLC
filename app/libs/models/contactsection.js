@@ -38,16 +38,33 @@ const contactFormSectionSchema = new Schema({
         required: true
     }
 });
+// Define the schema for the form leyends
+const FormLeyendsSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    subtitle: {
+        type: String,
+        required: true
+    },
+    button: {
+        type: String,
+        required: true
+    }
+});
 
 // Main schema that includes the contact form section and the form fields
 const contactFormSchema = new Schema({
     contactFormSection: contactFormSectionSchema,
-    formFields: [formFieldSchema]
+    formFields: [formFieldSchema],
+    formLeyends: FormLeyendsSchema
 }, {
     collection: 'contactsections' // Explicitly set the collection name
 });
 
 // Create the model or use the existing one if it's already been created in the current session
-const ContactForm = mongoose.models.ContactForm || mongoose.model('Contactsections', contactFormSchema);
+// Correct way to check if the model exists and avoid recompiling it
+const ContactForm = mongoose.models.ContactForm || mongoose.model('ContactForm', contactFormSchema, 'contactsections');
 
 export default ContactForm;
