@@ -1,34 +1,10 @@
 import { FaEnvelope, FaPhoneAlt, FaRegClock, FaMapMarkerAlt } from 'react-icons/fa';
-
-const contactInformation = [
-    {
-        id: 'address',
-        icon: <FaMapMarkerAlt className="text-green-500" />,
-        title: 'Address',
-        description: 'Our friendly team is here to help. 7828 woodside terrace, glen burnie, md 21061'
-    },
-    {
-        id: 'phone',
-        icon: <FaPhoneAlt className="text-green-500" />,
-        title: 'Phone',
-        description: 'Mon-Fri from 8am to 5pm. (443) 628-9734',
-        href: 'tel:+14436289734'
-    },
-    {
-        id: 'email',
-        icon: <FaEnvelope className="text-green-500" />,
-        title: 'Email',
-        description: 'Our friendly team is here to help. aglfences4@gmail.com',
-        href: 'mailto:aglfences4@gmail.com'
-    },
-    {
-        id: 'working-hours',
-        icon: <FaRegClock className="text-green-500" />,
-        title: 'Working Hours',
-        description: 'Sunday to Friday 8:00am - 5:00pm'
-    }
-];
-
+const iconMapping:any = {
+    FaMapMarkerAlt: <FaMapMarkerAlt className="text-green-500" />,
+    FaPhoneAlt: <FaPhoneAlt className="text-green-500" />,
+    FaEnvelope: <FaEnvelope className="text-green-500" />,
+    FaRegClock: <FaRegClock className="text-green-500" />,
+  };
 
 
 const getEstimated = async () => {
@@ -49,14 +25,14 @@ const getEstimated = async () => {
 
 const AGFenceAboutExtraInformation = async () => {
     const { aboutsections } = await getEstimated();
-    const { additionalinfo } = aboutsections[0] || {};
-
+    const { contactInformation } = aboutsections[0] || {};
+    
     return (
         <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center sm:mt-4 sm:mb-4">
-            {contactInformation.map((info) => (
+            {contactInformation && contactInformation.length > 0 && contactInformation?.map((info:any) => (
                 <div key={info.id} className="h-auto w-full flex flex-col justify-center items-center">
                     <div className="flex justify-center items-center h-auto sm:h-10 w-full">
-                        {info.icon}
+                    {iconMapping[info.icon]}
                     </div>
                     <h3 className="text-xl  font-bold flex h-auto sm:h-10 w-full justify-center items-center">{info.title}</h3>
                     {info.href ? (

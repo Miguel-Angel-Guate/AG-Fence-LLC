@@ -1,0 +1,46 @@
+{
+    "contactFormSection": {
+    "title": "Get In Touch With Us",
+    "subtitle": "If you are looking to improve your home or property, AG Fencing LLC is the perfect choice. Our experience, range of services and dedication make us your ideal partner for fencing, decking and remodelling projects both inside and out.... Call us Now!!!",
+    "image": "/assets/contact/contactus.webp' // replace with the path to your image"
+    },
+    "formFileds": [
+        
+            {
+                "label": "First Name",
+                "name": "name",
+                "type": "text",
+                "placeholder": "First name",
+                "required": true
+            },
+            {
+                "label": "Email Address",
+                "name": "email",
+                "type": "email",
+                "placeholder": "you@company.com",
+                "required": true
+            },
+            {
+                "label": "Phone Number",
+                "name": "phone",
+                "type": "tel",
+                "placeholder": "+1 (555) 000-0000",
+                "required": true
+            },
+            {
+                "label": "Subject",
+                "name": "subject",
+                "type": "text",
+                "placeholder": "Subject here",
+                "required": true
+            },
+            {
+                "label": "Message",
+                "name": "message",
+                "type": "textarea",
+                "placeholder": "Leave us a message...",
+                "required": true
+            }
+        
+    ]
+}

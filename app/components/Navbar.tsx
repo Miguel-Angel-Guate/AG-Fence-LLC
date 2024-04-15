@@ -5,7 +5,7 @@ import NavLinkStatus from "./navbar/LinkStatus";
 async function getNavDAta() {
   try {
     const apiUrl = process.env.API_URL
-    const res = await fetch(`${apiUrl}/api/navs`/* , { cache: "no-cache" }  */);
+    const res = await fetch(`${apiUrl}/api/navs`, { cache: "no-cache" } );
 
     if (!res.ok) {
       throw new Error("Failed to fetch navs data");
@@ -23,7 +23,7 @@ async function getNavDAta() {
 export default async function Navbar() {
   const { navs } = await getNavDAta()
   const navData = navs[0]
- 
+
   return (
     <header className="bg-white shadow-md py-4 sticky top-0 z-50">
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4">

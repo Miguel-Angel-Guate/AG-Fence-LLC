@@ -5,6 +5,21 @@ const {
     model
 } = mongoose;
 
+// SEO Schema
+const seoSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    keywords: {
+        type: String,
+        required: true
+    },
+});
 // Define the schema for the nested objects
 const heroSchema = new Schema({
     title: String,
@@ -75,6 +90,7 @@ const trustedBySchema = new Schema({
 
 // Define the main schema, which includes all nested objects
 const homeSchema = new Schema({
+    seo: seoSchema,
     hero: heroSchema,
     advantageSection: [String],
     intro: introSchema,

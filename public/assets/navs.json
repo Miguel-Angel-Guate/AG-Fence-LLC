@@ -1,0 +1,47 @@
+{
+    "call": "Call Us",
+    "phone": "(443) 628-9734",
+    "menu": [
+        {
+            "title": "Home",
+            "link": "/"
+        },
+        {
+            "title": "Services",
+            "submenu": [
+                {
+                    "title": "Fence",
+                    "link": "/services/fence"
+                },
+                {
+                    "title": "Deck",
+                    "link": "/services/deck"
+                },
+                {
+                    "title": "Interior Remodelation",
+                    "link": "/services/interior-remodelation"
+                },
+                {
+                    "title": "Exterior Remodelation",
+                    "link": "/services/exterior-remodelation"
+                }
+            ]
+        },
+        {
+            "title": "About",
+            "link": "/about"
+        },
+        {
+            "title": "Reviews",
+            "link": "/reviews"
+        },
+        {
+            "title": "Contact",
+            "link": "/contact"
+        },
+        {
+            "title": "Portfolio",
+            "link": "/portfolio"
+        }
+    ]
+}

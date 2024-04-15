@@ -15,6 +15,7 @@ const getAboutInformation = async () => {
 };
 const AGFenceAboutInformation = async () => {
     const { aboutsections } = await getAboutInformation();
+    
     const { information } = aboutsections[0];
     
     return (

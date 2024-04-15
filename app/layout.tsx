@@ -14,6 +14,16 @@ const lato = Lato({
   subsets: ['latin'],
 })
 
+export const metadata = {
+  verification: {
+    google: `${process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION}`
+   /*  yandex: 'yandex',
+    yahoo: 'yahoo',
+    other: {
+      me: ['my-email', 'my-link'],
+    }, */
+  },
+}
 
 
 export default function RootLayout({
