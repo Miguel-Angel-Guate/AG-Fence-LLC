@@ -43,13 +43,14 @@ export async function generateMetadata(
     /* console.log("🚀 ~ seo:", seo) */
     
     const metadataBase = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`)
+    const url = new URL('/about', process.env.NEXT_PUBLIC_BASE_URL);
 
     return {
         title: seo?.title,
         description: seo?.description,
         keywords: seo?.keywords,
         alternates: {
-            canonical: metadataBase,
+            canonical: url.toString(),
         },
         robots: {
             index: true, // Allow search engines to index the page
