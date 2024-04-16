@@ -1,20 +1,16 @@
 import connectMongoDB from '@/app/libs/mongodb'
 import { NextResponse } from "next/server";
-import ContactSection from '@/app/libs/models/contactsection';
-import mongoose from 'mongoose';
-/* import mongoose from 'mongoose'; */
-
+import Exteriorsection from '@/app/libs/models/exteriormodel';
 
 export async function GET() {
   await connectMongoDB();
   try {
-    const contactsections = await ContactSection.find()
+    const exteriorsections = await Exteriorsection.find();
     /* console.log('collection',Object.keys(mongoose.connection.collections)); */
-    /* console.log('Fetched data:', agfencedata); */
-   return NextResponse.json({contactsections})
+   
+   return NextResponse.json({exteriorsections})
   } catch (error) {
     console.error('Error fetching data:', error);
-    // If there's an error, send a JSON response with a 500 status code
     return new NextResponse(JSON.stringify({ error: 'An error occurred while fetching data' }), {
       status: 500,
       headers: {

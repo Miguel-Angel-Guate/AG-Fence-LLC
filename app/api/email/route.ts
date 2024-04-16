@@ -4,16 +4,14 @@ import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(request: NextRequest) {
     const { email, name, message, phone, subject } = await request.json();
-    console.log("🚀 ~ POST ~ email:", email, name, message)
-
-    // Update transport configuration for Titan Mail
+    
     const transport = nodemailer.createTransport({
-        host: "smtp.titan.email", // Titan SMTP host
-        port: 465, // Use 465 for SSL or 587 for StartTLS
-        secure: true, // true for 465, false for other ports
+        host: "smtp.titan.email",
+        port: 465,
+        secure: true,
         auth: {
-            user: process.env.MY_EMAIL, // Your Titan email
-            pass: process.env.MY_PASSWORD, // Your Titan password
+            user: process.env.MY_EMAIL,
+            pass: process.env.MY_PASSWORD,
         },
     });
 

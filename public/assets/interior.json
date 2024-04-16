@@ -1,0 +1,38 @@
+{
+    "seo": {
+        "title": "Interior Construction Service in glen burnie, MD",
+        "metaDescription": "agfencingllc offers interior construction service in Baltimore, MD. Call us now at (443) 628-9734 for a free estimate.",
+        "keywords": "interior remodelation construction,  construction service, deck construction in Baltimore, deck construction service in Baltimore, deck construction near me, deck construction company, deck construction company in Baltimore, deck construction contractor, deck construction contractor in Baltimore, deck construction contractor near me"
+    },
+    "interiorhome": [
+        {
+            "id": "description",
+            "content": "Our interior remodelling service is designed to transform the look and functionality of your home's interior spaces. We focus on quality materials and workmanship to ensure your remodel is durable and aesthetically appealing."
+        },
+        {
+            "id": "telephone",
+            "content": "Tel: (443) 628-9734",
+            "href": "tel:+14436289734"
+        },
+        {
+            "id": "email",
+            "content": "garcia@agfencingllc.com",
+            "href": "mailto:garcia@agfencingllc.com"
+        },
+        {
+            "id": "working-hours",
+            "content": "Sunday to Friday 8:00am - 5:00pm"
+        },
+        {
+            "id": "languages",
+            "content": "We Speak English & Spanish"
+        }
+    ],
+    "freeEstimate": [
+        {
+            "id": "free-estimate",
+            "text": "Call Us: (443) 628-9734",
+            "href": "tel:+14436289734"
+        }
+    ]
+}

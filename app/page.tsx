@@ -7,14 +7,12 @@ import AGRecentProject from "./components/home/AGFenceRecentProject";
 
 import Hero from "./components/home/Hero";
 import AGTrustBy from "./components/shared/AGFenceTrusBy";
-
 import { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
   params: { id: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }
-
 
 const getAGFenceHome = async () => {
 
@@ -51,16 +49,16 @@ export async function generateMetadata(
       canonical: metadataBase,
     },
     robots: {
-      index: true, // Allow search engines to index the page
-      follow: true, // Instruct search engines to follow the links on the page
-      nocache: false, // Allow caching of the page for efficiency (unless there's a specific reason to prevent caching)
+      index: true,
+      follow: true,
+      nocache: false,
       googleBot: {
-        index: true, // Allow Google to index the page
-        follow: true, // Allow Google to follow the links on the page
-        noimageindex: false, // Allow images on the page to be indexed unless you have a reason to prevent it
-        'max-video-preview': -1, // Use the default video preview size set by Google
-        'max-image-preview': 'large', // Suggest to Google that large image previews can be used
-        'max-snippet': -1, // Use the default snippet length set by Google
+        index: true,
+        follow: true,
+        noimageindex: false,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
     },
   }

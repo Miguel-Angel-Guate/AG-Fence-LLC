@@ -1,0 +1,38 @@
+{
+    "seo": {
+        "title": "Fencing Contractor in Glen burnie, MD | AG Fencing LLC",
+        "metaDescription": "AG Fencing LLC offers deck construction services in Baltimore, MD. We build custom decks using natural wood, composite materials, and vinyl. Call us for a free estimate!",
+        "keywords": "fencing construction, deck construction service, deck construction in Baltimore, deck construction service in Baltimore, deck construction near me, deck construction company, deck construction company in Baltimore, deck construction contractor, deck construction contractor in Baltimore, deck construction contractor near me"
+    },
+    "fencehome": [
+        {
+            "id": "description",
+            "content": "Our fence construction service is designed to transform your outdoor space into an oasis of relaxation and entertainment. We offer a wide range of material options, from natural wood to composite materials and vinyl, to suit your style and maintenance preferences."
+        },
+        {
+            "id": "telephone",
+            "content": "Tel: (443) 628-9734",
+            "href": "tel:+14436289734"
+        },
+        {
+            "id": "email",
+            "content": "garcia@agfencingllc.com",
+            "href": "mailto:garcia@agfencingllc.com"
+        },
+        {
+            "id": "working-hours",
+            "content": "Sunday to Friday 8:00am - 5:00pm"
+        },
+        {
+            "id": "languages",
+            "content": "We Speak English & Spanish"
+        }
+    ],
+    "freeEstimate": [
+        {
+            "id": "free-estimate",
+            "text": "Call Us: (443) 628-9734",
+            "href": "tel:+14436289734"
+        }
+    ]
+}

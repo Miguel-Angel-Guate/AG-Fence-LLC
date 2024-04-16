@@ -1,10 +1,3 @@
-import { Metadata, ResolvingMetadata } from 'next'
-
-type Props = {
-  params: { id: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
 
 const getAGFenceHome = async () => {
 
@@ -22,30 +15,8 @@ const getAGFenceHome = async () => {
   }
 };
 
-
-/* export async function generateMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  
-  const id = params.id
-
-  const { agfencedata } = await getAGFenceHome()
-  console.log("🚀 ~ agfencedata:", agfencedata)
-  
-  
-  return {
-    title: '',
-    openGraph: {
-      images: [],
-    },
-  }
-}
- */
 const Hero = async () => {
   const { agfencedata } = await getAGFenceHome()
-  /* console.log("🚀 ~ Hero ~ agfencedata:", agfencedata) */
-
   const { hero } = agfencedata[0].home;
 
   const { title, subtitle, description, subDescription } = hero;

@@ -1,0 +1,76 @@
+{
+    "legends": {
+        "title": "What Customers Say",
+        "subtitle": "Read what our clients have to say about our landscaping and fencing services.",
+        "showMore": "Show More",
+        "showLess": "Show Less"
+    },
+    "seo": {
+        "title": "Testimonials | Landscaping & Fencing Services | Green Thumb Landscaping",
+        "description": "Read what our clients have to say about our landscaping and fencing services. We take pride in delivering exceptional results and customer satisfaction.",
+        "keywords": "testimonials, reviews, landscaping, fencing, clients, customer satisfaction"
+    },
+    "reviews": [
+        {
+            "name": "Jane Doe",
+            "location": "Los Angeles",
+            "comment": "The service was outstanding! Thank you for making our backyard a dream come true.",
+            "date": "2023-03-01"
+        },
+        {
+            "name": "John Smith",
+            "location": "New York",
+            "comment": "Professional team, excellent craftsmanship. Highly recommended.",
+            "date": "2023-03-05"
+        },
+        {
+            "name": "Alice Johnson",
+            "location": "Chicago",
+            "comment": "Our new deck is gorgeous! We can't wait to host our friends and family.",
+            "date": "2023-03-10"
+        },
+        {
+            "name": "Omar Hassan",
+            "location": "Miami",
+            "comment": "Great value for money. They finished the work ahead of schedule without compromising quality.",
+            "date": "2023-03-15"
+        },
+        {
+            "name": "Samantha Green",
+            "location": "Seattle",
+            "comment": "Very pleased with the fence installation. It looks sturdy and elegant!",
+            "date": "2023-03-20"
+        },
+        {
+            "name": "Luis Ortega",
+            "location": "Houston",
+            "comment": "The attention to detail is phenomenal. The team was courteous and respectful.",
+            "date": "2023-03-25"
+        },
+        {
+            "name": "Emily White",
+            "location": "San Francisco",
+            "comment": "They transformed our front yard beautifully. Exceptional design and service!",
+            "date": "2023-04-01"
+        },
+        {
+            "name": "David Chang",
+            "location": "Boston",
+            "comment": "I'm impressed with the quick turnaround and the quality of work. A job well done!",
+            "date": "2023-04-05"
+        },
+        {
+            "name": "Isabella Brown",
+            "location": "Philadelphia",
+            "comment": "The team went above and beyond to ensure our satisfaction. Totally worth it!",
+            "date": "2023-04-10"
+        },
+        {
+            "name": "Ethan Johnson",
+            "location": "Dallas",
+            "comment": "Outstanding results! Our backyard has never looked better.",
+            "date": "2023-04-15"
+        }
+    ]
+
+}

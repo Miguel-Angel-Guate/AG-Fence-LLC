@@ -39,7 +39,6 @@ const NavLinkStatus = ({ navData }: { navData: Navs }) => {
 
             <nav className="hidden sm:flex space-x-4">
                 {navData?.menu?.map((item: MenuItem) => {
-                    // Check if the item has a submenu
                     if (item.submenu) {
                         return (
                             <div key={item.title} className="group relative">

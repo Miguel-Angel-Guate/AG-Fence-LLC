@@ -4,22 +4,16 @@
 
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
-@font-face {
-    font-family: 'Nahum Gothic';
-    src: url('/NahumGothic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 .slick-slider {
     overflow: hidden;
     padding-bottom: 40px;
-    }
+}
+
 .slick-dots {
     height: 10vh;
-    }
-.nahum-gothic {
-        font-family: 'Nahum Gothic', sans-serif;
-    }
+}
 
-      
+.nahum-gothic {
+    font-family: 'Nahum Gothic', sans-serif;
+}
