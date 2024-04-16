@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { Metadata, ResolvingMetadata } from 'next'
-/* type Props = {
+type Props = {
     params: { id: string }
     searchParams: { [key: string]: string | string[] | undefined }
 }
@@ -59,15 +59,15 @@ export async function generateMetadata(
         },
     }
 
-} */
+}
 
 const AGRemodelationExterior = async () => {
-    /* const { exteriorsections } = await getExteriorData();
-    const { exteriorhome, freeEstimate } = exteriorsections[0]; */
+    const { exteriorsections } = await getExteriorData();
+    const { exteriorhome, freeEstimate } = exteriorsections[0];
     return (
         <>
             <AGTitleServices title="AG Remodelation Exterior Services" />
-            {/* <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
+            <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
                 <div className="lg:w-1/2 p-4">
                     <h2 className="text-2xl font-bold mb-4">Deck</h2>
                     {exteriorhome.map((detail: any) => (
@@ -106,7 +106,7 @@ const AGRemodelationExterior = async () => {
                         </a>
                     </div>
                 ))}
-            </div> */}
+            </div>
             <AGFenceAboutExtraInformation />
         </>
     );
