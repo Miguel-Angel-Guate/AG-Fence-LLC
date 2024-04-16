@@ -4,19 +4,7 @@ import Link from 'next/link';
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 
-
-const navData = {
-    menu: [
-        { title: "Home", link: "/" },
-        { title: "About", link: "/about" },
-        { title: "contac", link: "/contact" },
-        { title: "Fence", link: "/services/fence" },
-        { title: "Deck", link: "/services/deck" },
-        { title: "review", link: "/reviews" },
-    ],
-};
-
-const MobileNav = ({ isOpen, toggleMenu }: any) => {
+const MobileNav = ({ isOpen, toggleMenu, menuMobile }: any) => {
 
     return (
         <div className='relative sm:hidden'>
@@ -39,9 +27,8 @@ const MobileNav = ({ isOpen, toggleMenu }: any) => {
                                     <MdClose className="w-8 h-8" />
                                 </button>
                             </div>
-                            {/* Menu items... */}
-                            {navData.menu.map((item, index) => (
-
+                            
+                            {menuMobile.map((item:any, index:any) => (
                                 <Link
                                     className='w-full flex justify-center items-center hover:bg-blue-500hover:underline focus:underline active:underline'
                                     key={index}
@@ -55,6 +42,7 @@ const MobileNav = ({ isOpen, toggleMenu }: any) => {
                                 </Link>
                             ))}
                         </nav>
+                        
                     </div>
                 </div>
             )}

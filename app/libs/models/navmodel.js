@@ -22,7 +22,8 @@ const navSchema = new Schema({
     type: String,
     required: true // Ensures 'phone' is always provided
   },
-  menu: [menuItemSchema] // Use the menuItemSchema for the 'menu' field
+  menu: [menuItemSchema], // Use the menuItemSchema for the 'menu' field
+  menuMobile: [menuItemSchema]
 });
 
 // Create the model from the schema

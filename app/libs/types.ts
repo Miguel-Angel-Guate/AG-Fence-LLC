@@ -15,6 +15,7 @@ export interface Navs {
   call: string;
   phone: string;
   menu: MenuItem[];
+  menuMobile: MenuItem[];
 }
 // Define a type for the API response structure if it includes the `navs` property
 export interface ApiNavsResponse {

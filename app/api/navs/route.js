@@ -1,6 +1,6 @@
 import connectMongoDB from '@/app/libs/mongodb'
 import { NextResponse } from "next/server";
-import Nav from '@/app/libs/models/nav';
+import Nav from '@/app/libs/models/navmodel';
 
 
 export async function GET() {

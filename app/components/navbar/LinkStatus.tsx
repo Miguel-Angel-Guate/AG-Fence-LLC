@@ -9,6 +9,8 @@ import { useState } from "react";
 
 
 const NavLinkStatus = ({ navData }: { navData: Navs }) => {
+
+    const { menuMobile } = navData
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -68,7 +70,7 @@ const NavLinkStatus = ({ navData }: { navData: Navs }) => {
                     }
                 })}
             </nav>
-            <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} />
+            <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} menuMobile={menuMobile} />
         </>
     );
 }

@@ -65,9 +65,9 @@ const AGFenceReviews = async () => {
     const { reviews, legends } = reviewsections[0];
 
     return (
-        
-            <ReviewsData reviews={reviews} legends={legends} />
-        
+
+        <ReviewsData reviews={reviews} legends={legends} />
+
     );
 };
 

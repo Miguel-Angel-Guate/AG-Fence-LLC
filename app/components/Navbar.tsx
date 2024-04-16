@@ -5,7 +5,7 @@ import NavLinkStatus from "./navbar/LinkStatus";
 async function getNavDAta() {
   try {
     const apiUrl = process.env.API_URL
-    const res = await fetch(`${apiUrl}/api/navs`, { cache: "no-cache" } );
+    const res = await fetch(`${apiUrl}/api/navs`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch navs data");
