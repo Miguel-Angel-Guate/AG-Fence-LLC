@@ -3,7 +3,7 @@ import ReviewsData from "@/app/components/reviews/ReviewsContent";
 
 import { Metadata, ResolvingMetadata } from 'next'
 
-type Props = {
+/* type Props = {
     params: { id: string }
     searchParams: { [key: string]: string | string[] | undefined }
 }
@@ -57,18 +57,18 @@ export async function generateMetadata(
         },
     }
 
-}
+} */
 
 
 
 const AGFenceReviews = async () => {
-    const { reviewsections } = await getReviewsData()
-    const { reviews, legends } = reviewsections[0];
+    /*  const { reviewsections } = await getReviewsData()
+     const { reviews, legends } = reviewsections[0]; */
 
     return (
         <>
-
-            <ReviewsData reviews={reviews} legends={legends} />
+            <h1>hello reviews</h1>
+            {/*  <ReviewsData reviews={reviews} legends={legends} /> */}
         </>
     );
 };

@@ -8,7 +8,6 @@ export async function GET() {
   await connectMongoDB();
   try {
     const interiorsections = await Interiorsection.find();
-    console.log("🚀 ~ GET ~ interiorsections:", interiorsections)
     /* console.log('collection',Object.keys(mongoose.connection.collections)); */
    
    return NextResponse.json({interiorsections})
