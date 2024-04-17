@@ -19,6 +19,7 @@ const getAGFenceHome = async () => {
 };
 
 const AGFenceCompany = async() => {
+    
     const { agfencedata } = await getAGFenceHome()
     const {  companyInfo } = agfencedata[0].home;
     
@@ -61,10 +62,9 @@ const AGFenceCompany = async() => {
                             <div>
                                 <h3 className="text-xl font-semibold mb-2">{companyInfo.estimates.title}</h3>
                                 <p className="mb-4">{companyInfo.estimates.description}</p>
-                                <span className="text-indigo-600 hover:underline">{companyInfo.estimates.detailcontact}</span>
+                                <a href="tel:+14436289744" className="text-indigo-600 hover:underline cursor-pointer">{companyInfo.estimates.detailcontact}</a>
                             </div>
 
-                            {/* Service Area */}
                             <div>
                                 <h3 className="text-xl font-semibold mb-2">{companyInfo.serviceArea.title}</h3>
                                 <p className="mb-4">{companyInfo.serviceArea.description}</p>

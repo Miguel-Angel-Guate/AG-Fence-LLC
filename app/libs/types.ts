@@ -84,6 +84,7 @@ interface Project {
   _id: string;
   title: string;
   imageAlt: string;
+  link: string;
 }
 
 export interface RecentProjects {

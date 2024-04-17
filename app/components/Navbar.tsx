@@ -33,7 +33,7 @@ export default async function Navbar() {
           <div>
             <span className="text-black text-sm">{navData?.call}</span><br />
             <span className="text-black font-bold">
-              <a href={`tel:${navData?.phone}`}>
+              <a href={`tel:+1${navData?.phone}`}>
                 {navData?.phone}
               </a>
             </span>

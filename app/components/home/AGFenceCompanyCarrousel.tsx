@@ -2,11 +2,13 @@
 import React, { useState } from 'react';
 import { CompanyInfo } from "@/app/libs/types";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Link from 'next/link';
 
 
 const MobileCarousel = ({ companyInfo }: { companyInfo: CompanyInfo }) => {
+    
     const [currentIndex, setCurrentIndex] = useState(0);
-    const infoItems = [companyInfo.workHours, companyInfo.location, companyInfo.serviceArea, companyInfo.estimates];
+    const infoItems = [companyInfo.estimates, companyInfo.location, companyInfo.serviceArea, companyInfo.workHours];
 
     const handlePrev = () => {
         setCurrentIndex((prevIndex) =>
@@ -24,9 +26,18 @@ const MobileCarousel = ({ companyInfo }: { companyInfo: CompanyInfo }) => {
         <div className="flex flex-wrap w-4/5 justify-center items-center">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">{item.title}</h3>
             <p className="text-gray-600 flex justify-center text-justify w-[95%] mb-4">{item.description}</p>
-            <button className="bg-primary flex items-center justify-center w-40 h-11 text-white rounded hover:bg-indigo-800">
-            {item.detailcontact}
-            </button>
+            {/* Conditional link handling */}
+            {item.link ? (
+                <Link key={item.link} href={item.link} passHref>
+                    <span className="bg-primary flex items-center justify-center w-40 h-11 text-white rounded hover:bg-indigo-800">
+                        {item.detailcontact}
+                    </span>
+                </Link>
+            ) : (
+                <a href="tel:+14436289734" className="bg-primary flex items-center justify-center w-40 h-11 text-white rounded hover:bg-indigo-800">
+                    {item.detailcontact}
+                </a>
+            )}
         </div>
     );
 
@@ -43,7 +54,7 @@ const MobileCarousel = ({ companyInfo }: { companyInfo: CompanyInfo }) => {
                     onClick={handlePrev}
                     aria-label="Previous slide"
                 >
-                    
+
                     <FaArrowLeft className='text-primary' />
 
                 </button>
@@ -61,14 +72,16 @@ const MobileCarousel = ({ companyInfo }: { companyInfo: CompanyInfo }) => {
 
             {/* Carousel Dots */}
             <div className="flex justify-center  mt-4">
-                {infoItems.map((_, index) => (
-                    <button
-                        key={index}
-                        className={`h-3 w-3 rounded-full mx-1 ${currentIndex === index ? 'bg-primary' : 'bg-gray-400'}`}
-                        onClick={() => setCurrentIndex(index)}
-                        aria-label={`Go to slide ${index}`}
-                    />
-                ))}
+                {infoItems.map((_, index) => {
+                    return (
+                        <button
+                            key={index}
+                            className={`h-3 w-3 rounded-full mx-1 ${currentIndex === index ? 'bg-primary' : 'bg-gray-400'}`}
+                            onClick={() => setCurrentIndex(index)}
+                            aria-label={`Go to slide ${index}`}
+                        />
+                    )
+                })}
             </div>
         </div>
     );

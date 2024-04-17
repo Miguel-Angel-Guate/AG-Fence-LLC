@@ -1,6 +1,7 @@
 "use client"
 import { RecentProjects } from "@/app/libs/types";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -27,23 +28,25 @@ const AGRecentCarrousel = ({ recentProjects }: { recentProjects: RecentProjects 
             <div className="flex items-center justify-center">
                 <FaArrowLeft className=" text-primary cursor-pointer" size={24} onClick={handlePrev} />
                 <div className="w-full flex flex-wrap justify-center">
-                    {recentProjects.projects.map((project, index) => (
-                        <div key={project._id} className={`w-full p-4 ${currentIndex === index ? 'block' : 'hidden'}`}>
-                            <Image
-                                src={imagePath(index)}
-                                alt={project.imageAlt}
-                                width={375}
-                                height={491}
-                                className="rounded-lg shadow-lg"
-                            />
-                            <div className=" bg-black bg-opacity-40 flex w-full  flex-wrap justify-center transition-opacity duration-300">
-                                {/* <h3 className="text-white flex w-full text-lg justify-center font-semibold">{project.title}</h3> */}
-                                <button className="bg-green-500 text-white flex w-full justify-center   rounded hover:bg-green-700 transition-colors ">
-                                    Visit
-                                </button>
+                    {recentProjects.projects.map((project, index) => {
+                        return (
+                            <div key={project._id} className={`w-full p-4 ${currentIndex === index ? 'block' : 'hidden'}`}>
+                                <Image
+                                    src={imagePath(index)}
+                                    alt={project.imageAlt}
+                                    width={375}
+                                    height={491}
+                                    className="rounded-lg shadow-lg"
+                                />
+                                <div className=" bg-black bg-opacity-40 flex w-full  flex-wrap justify-center transition-opacity duration-300">
+                                    {/* <h3 className="text-white flex w-full text-lg justify-center font-semibold">{project.title}</h3> */}
+                                    <Link href={project.link} passHref className="bg-green-500 text-white flex w-full justify-center   rounded hover:bg-green-700 transition-colors ">
+                                        Visit
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
                 <FaArrowRight className=" text-primary cursor-pointer" size={24} onClick={handleNext} />
             </div>
