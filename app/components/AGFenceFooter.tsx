@@ -71,7 +71,7 @@ const AGFooter = async () => {
                     <div className='flex flex-col w-full items-start'>
                         <div className="flex items-center  justify-start w-full py-1">
                             <FaPhoneAlt className="text-primary mr-2" aria-hidden="true" />
-                            <a href={`tel:${contact?.phone}`}>
+                            <a href={`tel:+1${contact?.phone}`}>
                             <span className="text-gray-600 hover:text-gray-800">{contact.phone}</span>
                             </a>
                         </div>
