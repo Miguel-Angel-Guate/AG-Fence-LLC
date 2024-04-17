@@ -92,6 +92,8 @@ export interface RecentProjects {
   imageAlt: string;
   projects: Project[];
   seeMoreLink: string;
+  _id: string;
+  link: string;
 }
 export interface TrustedBy {
   title: string;

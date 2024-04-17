@@ -71,7 +71,7 @@ const AGFenceService = async () => {
             <AGTitleServices title="AG Fence Services" />
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
                 <div className="lg:w-1/2 p-4">
-                    <h2 className="text-2xl font-bold mb-4">Deck</h2>
+                    <h2 className="text-2xl font-bold mb-4">Fences</h2>
                     {fencehome.map((detail: any) => (
                         <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
                             {detail.id !== 'description' && (

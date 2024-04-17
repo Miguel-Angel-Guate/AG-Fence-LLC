@@ -31,28 +31,28 @@
         },
         "services": {
             "fence": {
-                "title": "Fence",
+                "title": "Fences",
                 "description": "Whether you're looking for a traditional wood fence that brings warmth and rustic charm to your home, a low-maintenance vinyl fence that maintains its appearance for years, or an aluminum fence that combines durability with elegance, we're ready to design, build and install the perfect fence for you.",
                 "button": "Read More",
-                "link": "/services/fence"
+                "link": "/services/fences"
             },
             "deck": {
-                "title": "Deck",
+                "title": "Decks Building",
                 "description": "We offer a wide range of material options, including natural wood, composite wood, vinyl and more, to meet your preferences and maintenance needs. Whether you want a spacious deck for social gatherings, an elevated deck with panoramic views, or an intimate deck for relaxing, our team of deck builders will handle every aspect of the project, from planning to construction, to ensure you get an outdoor space that complements your lifestyle and enhances the beauty of your property.",
                 "button": "Read More",
-                "link": "/services/deck"
+                "link": "/services/decks"
             },
             "interior": {
-                "title": "Interior Remodelation",
+                "title": "Interior Remodeling",
                 "description": "Our team of highly trained and experienced professionals is dedicated to providing you with superior results on every project, whether we are building a fence, a deck, or carrying out renovations. Your satisfaction is our priority, and we work tirelessly to ensure that every aspect of our services reflects our commitment to quality and professionalism.",
                 "button": "Read More",
-                "link": "/services/interior-remodelation"
+                "link": "/services/interior-remodeling"
             },
             "exterior": {
-                "title": "Exterior Remodelation",
+                "title": "Exterior Remodeling",
                 "description": "Our team of highly trained and experienced professionals is dedicated to providing you with superior results on every project, whether we are building a fence, a deck, or carrying out renovations. Your satisfaction is our priority, and we work tirelessly to ensure that every aspect of our services reflects our commitment to quality and professionalism.",
                 "button": "Read More",
-                "link": "/services/exterior-remodelation"
+                "link": "/services/exterior-remodeling"
             }
         },
         "points": {
@@ -108,21 +108,19 @@
                 {
                     "title": "Decorative Fencing",
                     "imageAlt": "Decorative fencing project",
-                    "link": "/fence"
+                    "link": "services/fences"
                 },
                 {
-                    "title": "Built in Bench",
+                    "title": "Exterior Remodeling",
                     "imageAlt": "Built in bench project",
-                    "link": "/deck"
+                    "link": "/services/exterior-remodeling"
                 },
                 {
                     "title": "Deck Restoration",
                     "imageAlt": "Deck restoration project",
-                    "link": "/services/remodelation"
+                    "link": "/services/decks"
                 }
-            ],
-            "seeMoreLink": "Portfolio",
-            "seeMoreLinkUrl": "/portfolio"
+            ]
         },
         "trustedBy": {
             "title": "Trusted by these companies",
