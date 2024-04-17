@@ -8,13 +8,10 @@
                 "link": "/about"
             },
             {
-                "title": "Exterior Remodelation",
-                "link": "/services/exterior-remodelation"
+                "title": "Exterior Remodeling",
+                "link": "/services/exterior-remodeling"
             },
-            {
-                "title": "Portfolio",
-                "link": "/portfolio"
-            },
+            
             {
                 "title": "Reviews",
                 "link": "/reviews"
@@ -29,16 +26,16 @@
                 "link": "/contact"
             },
             {
-                "title": "Fencing",
-                "link": "/services/fence"
+                "title": "Fences",
+                "link": "/services/fences"
             },
             {
-                "title": "Deck",
-                "link": "/services/deck"
+                "title": "Decks Building",
+                "link": "/services/decks"
             },
             {
-                "title": "Interior Remodelation",
-                "link": "/services/interior-remodelation"
+                "title": "Interior Remodeling",
+                "link": "/services/interior-remodeling"
             }
         ]
     },
