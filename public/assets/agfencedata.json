@@ -8,7 +8,7 @@
         "hero": {
             "title": "Top Tier Fencing Contractor in Glen Burnie",
             "subtitle": "Transform your spaces with style and functionality!",
-            "description": "AG Fencing LLC understands the importance of every construction project. We care for every element and detail to help you create spaces that elevate your home's aesthetics.",
+            "description": "AG Fencing LLC understands the importance of every construction project. We care for every element and detail to help you create spaces that elevate your home aesthetics.",
             "subDescription": "Our team of experts is ready to turn your vision into reality, providing you with professional, reliable service and an impeccable focus on classic and avant-garde concepts and designs for your fence, deck, and home.",
             "button": "Contact Us",
             "link": "/contact"
@@ -37,7 +37,7 @@
             "fence": {
                 "title": "Fencing Contractor Services",
                 "subtitle": "Fences are aesthetic and functional elements.",
-                "description": "We work with a wide variety of high-quality materials, such as wood, vinyl, aluminum, and more, to provide you with options that suit your preferences and the style of your home. Whether you want a warm, rustic look with a wood fence, a durable, low-maintenance option with vinyl fencing, or a modern look with aluminum fencing, we're ready to make it happen.",
+                "description": "We work with a wide variety of high-quality materials, such as wood, vinyl, aluminum, and more, to provide you with options that suit your preferences and the style of your home. Whether you want a warm, rustic look with a wood fence, a durable, low-maintenance option with vinyl fencing, or a modern look with aluminum fencing, we are ready to make it happen.",
                 "button": "Read More",
                 "link": "/services/fences"
             },
@@ -57,7 +57,7 @@
             },
             "exterior": {
                 "title": "Outdoor Remodeling Contractor",
-                "subtitle": "Enhance your home's curb appeal!",
+                "subtitle": "Enhance your home curb appeal!",
                 "description": "We understand that the exterior of your home is visitors first impression of your property, and we want to make sure that it impacts and reflects your style. We are an outdoor remodeling contractor working closely with you to select paints, siding, landscaping, and hardscaping to create a fresh, modern look.",
                 "button": "Read More",
                 "link": "/services/exterior-remodeling"
@@ -98,13 +98,13 @@
             },
             "location": {
                 "title": "Extensive experience and expertise",
-                "description": "We understand Glen Burnie's local codes and regulations and stay current with the latest trends and developments in the construction industry.",
+                "description": "We understand Glen Burnie local codes and regulations and stay current with the latest trends and developments in the construction industry.",
                 "detailcontact": "Check our reviews",
                 "link": "/reviews"
             },
             "serviceArea": {
                 "title": "Excellent quality materials",
-                "description": "We work with industry-recognized suppliers and use high-quality materials to ensure the work's precise finish and durability.",
+                "description": "We work with industry-recognized suppliers and use high-quality materials to ensure the work is precise finish and durability.",
                 "detailcontact": "About Us",
                 "link": "/about"
             }

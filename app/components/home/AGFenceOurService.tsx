@@ -41,8 +41,9 @@ const AGFenceOurService = async () => {
                         style={{ width: 'calc(25% - 1rem)', cursor: 'pointer', height: 'calc(100% - 2rem)' }}  // Adjusted height here
                     >
                         <h3 className="font-semibold flex self-center text-lg">{service.title}</h3>
+                        <p className="flex justify-center text-sm mb-2 mt-2">{service.subtitle}</p>
                         <div className="w-[90%] md:w-[95%] flex-grow">
-                            <p className="text-sm mb-4">{service.description}</p>
+                            <p className="text-base mb-4">{service.description}</p>
                         </div>
                         <div className="bg-primary h-[7vh] flex items-center justify-center rounded">
                             <Link href={service.link} passHref>
