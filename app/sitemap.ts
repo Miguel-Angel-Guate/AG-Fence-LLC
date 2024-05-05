@@ -22,12 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/portfolio`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.7,
-        },
-        {
             url: `${baseUrl}/reviews`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
@@ -35,25 +29,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         // Services
         {
-            url: `${baseUrl}/services/deck`,
+            url: `${baseUrl}/services/fences`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.6,
         },
         {
-            url: `${baseUrl}/services/fence`,
+            url: `${baseUrl}/services/decks`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.6,
         },
         {
-            url: `${baseUrl}/services/remodelation-exterior`,
+            url: `${baseUrl}/services/interior-remodeling`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.6,
         },
         {
-            url: `${baseUrl}/services/remodelation-interior`,
+            url: `${baseUrl}/services/exterior-remodeling`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.6,

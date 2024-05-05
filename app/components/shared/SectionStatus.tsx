@@ -16,15 +16,16 @@ const SectionStatusLink = () => {
                 ))}
             </div>
             {pathname !== '/' && (
-                <div className="inline-flex items-center justify-center w-full sm:mb-4">
-                <hr className="w-full h-px  bg-gray-200 border-0 rounded dark:bg-gray-700" />
-                <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2">
-                    <svg className="w-4 h-4 text-primary " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
-                        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-                    </svg>
+                <div className="inline-flex  items-center justify-center w-full sm:mb-4">
+                    <hr className="w-full h-px  bg-gray-200 border-0 rounded dark:bg-gray-700" />
+                    <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2">
+                    <svg width="auto" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 10H10M14 16H18M14 10H18M6 16H10M10 20H14V7L12 4L10 7V20ZM2 20H6V7L4 4L2 7V20ZM18 20H22V7L20 4L18 7V20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                 </div>
             </div>
             )}
+
 
 
 
