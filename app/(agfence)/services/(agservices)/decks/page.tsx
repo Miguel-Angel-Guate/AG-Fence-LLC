@@ -34,7 +34,7 @@ export async function generateMetadata(
     const { decksections } = await getDeckData()
     const { seo } = decksections[0];
 
-    const url = new URL('/service/deck', process.env.NEXT_PUBLIC_BASE_URL);
+    const url = new URL('/services/decks', process.env.NEXT_PUBLIC_BASE_URL);
 
     return {
         title: seo.title,
@@ -74,7 +74,7 @@ const AGDeckService = async () => {
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
                 <div className="lg:w-1/2 p-4">
                     <h2 className="text-2xl font-bold mb-4">Decks Building</h2>
-                    {deckhome.map((detail: any) => (
+                    {/* {deckhome.map((detail: any) => (
                         <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
                             {detail.id !== 'description' && (
                                 <div className="flex-shrink-0">
@@ -89,7 +89,7 @@ const AGDeckService = async () => {
                                 <p className={`${detail.id === 'description' ? '' : 'ml-2'}`}>{detail.content}</p>
                             )}
                         </div>
-                    ))}
+                    ))} */}
                 </div>
                 <div className="lg:w-1/2 p-4">
                     <Image
@@ -102,7 +102,7 @@ const AGDeckService = async () => {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center">
-                {freeEstimate?.length > 0 && freeEstimate.map((option: any) => (
+                {freeEstimate.map((option: any) => (
                     <div key={option.id} className={`bg-green-600 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer w-auto mb-4`}>
                         <a href={option.href} className="flex justify-center items-center space-x-2 hover:underline">
                             <FaPhone className="text-white" />

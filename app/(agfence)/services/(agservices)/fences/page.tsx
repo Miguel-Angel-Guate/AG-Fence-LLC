@@ -35,7 +35,7 @@ export async function generateMetadata(
 
 
 
-    const url = new URL('/service/fence', process.env.NEXT_PUBLIC_BASE_URL);
+    const url = new URL('/services/fences', process.env.NEXT_PUBLIC_BASE_URL);
 
     return {
         title: seo.title,
@@ -65,7 +65,6 @@ const AGFenceService = async () => {
 
     const { fencesections } = await getFenceData();
     const { fencehome, freeEstimate } = fencesections[0];
-    console.log("🚀 ~ AGFenceService ~ fencehome:", fencehome)
     const { title } = fencehome[0];
 
     return (
@@ -77,7 +76,7 @@ const AGFenceService = async () => {
                     {fencehome.map((detail: any) => (
                         detail.content && (
                             <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
-                                {detail.id !== 'description' && (
+                                {detail.content !== '' && detail.id !== 'description' && (
                                     <div className="flex-shrink-0">
                                         <FaRegCheckCircle className="text-green-500 mr-2" />
                                     </div>
@@ -87,11 +86,20 @@ const AGFenceService = async () => {
                                         {detail.content}
                                     </a>
                                 ) : (
-                                    <p className={`${detail.id === 'description' ? '' : 'ml-2'}`}>{detail.content}</p>
+                                    detail.id === 'description' ? (
+                                        <div className="flex flex-col">
+                                            <p>{detail.content.firstDescrirption}</p> <br />
+                                            <p>{detail.content.secondDescription}</p> <br />
+                                            <p className="hidden sm:block">{detail.content.thirdDescription}</p> 
+                                        </div>
+                                    ) : (
+                                        <p className="ml-2">{detail.content}</p>
+                                    )
                                 )}
                             </div>
                         )
                     ))}
+
 
                 </div>
                 <div className="lg:w-1/2 p-4">

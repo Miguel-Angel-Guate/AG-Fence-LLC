@@ -35,7 +35,7 @@ export async function generateMetadata(
 
 
 
-    const url = new URL('/service/exterior-remodelation', process.env.NEXT_PUBLIC_BASE_URL);
+    const url = new URL('/services/exterior-remodeling', process.env.NEXT_PUBLIC_BASE_URL);
 
     return {
         title: seo.title,

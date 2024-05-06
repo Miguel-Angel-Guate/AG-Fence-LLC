@@ -29,16 +29,25 @@ const FreeEstimateSchema = new Schema({
     _id: false
 });
 
-// Main schema for the deck section
+// Define the schema for the deck section
 const DeckSectionSchema = new Schema({
+    title: String,
+    description: [String] // Array of strings to store multiple paragraphs
+}, {
+    _id: false // Prevent _id creation for subdocuments if not necessary
+});
+
+// Main schema for the deck section
+const DeckSchema = new Schema({
     seo: SeoSchema,
     deckhome: [DeckHomeItemSchema],
-    freeEstimate: [FreeEstimateSchema]
+    freeEstimate: [FreeEstimateSchema],
+    deckSection: DeckSectionSchema
 }, {
     collection: 'decksections' // Specify the MongoDB collection name
 });
 
 // Compile model from schema
-const DeckSection = mongoose.models.DeckSection || mongoose.model('DeckSection', DeckSectionSchema);
+const DeckSection = mongoose.models.DeckSection || mongoose.model('DeckSection', DeckSchema);
 
 export default DeckSection;
