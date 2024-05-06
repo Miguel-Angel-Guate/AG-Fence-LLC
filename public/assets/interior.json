@@ -1,14 +1,18 @@
 {
     "seo": {
-        "title": "Interior Construction Service in glen burnie, MD",
-        "metaDescription": "agfencingllc offers interior construction service in Baltimore, MD. Call us now at (443) 628-9734 for a free estimate.",
-        "keywords": "interior remodelation construction,  construction service, deck construction in Baltimore, deck construction service in Baltimore, deck construction near me, deck construction company, deck construction company in Baltimore, deck construction contractor, deck construction contractor in Baltimore, deck construction contractor near me"
+        "title": "Interior Remodeling Service | AG Fencing LLC | Baltimore, MD",
+        "metaDescription": "Are you looking to hire an interior remodeling service? AG Fencing offers customized solutions, from kitchen and bathroom renovations to design changes and finishes, to make your dreams come true. See more!",
+        "keywords": "interior remodeling service, remodeling service in glen burnie, interior remodeling, remodeling services."
+    },
+    "interiorSection": {
+        "title": "Renew Your Spaces with Our Interior Remodeling Service in Glen Burnie, MD",
+        "description": [
+            "The interior transformation experts at AG Fencing can create stylish and functional environments that reflect your style. On every project, they focus on creating beautiful spaces with only the highest quality materials to ensure long-lasting remodels.",
+            "Our interior remodeling team is dedicated to making your dream decor a reality. Whether you are looking for a complete renovation or minor changes to improve the functionality and style of your home, we are ready to make it happen.",
+            "At AG Fencing LLC we provide you with expert guidance in selecting the style, colors and finishes that suit you and your budget. Then, we use only the highest quality materials, ensuring superior installation techniques to guarantee exceptional results that stand the test of time."
+        ]
     },
     "interiorhome": [
-        {
-            "id": "description",
-            "content": "Our interior remodelling service is designed to transform the look and functionality of your home's interior spaces. We focus on quality materials and workmanship to ensure your remodel is durable and aesthetically appealing."
-        },
         {
             "id": "telephone",
             "content": "Tel: (443) 628-9734",
@@ -31,7 +35,7 @@
     "freeEstimate": [
         {
             "id": "free-estimate",
-            "text": "Call Us: (443) 628-9734",
+            "text": "Call Us",
             "href": "tel:+14436289734"
         }
     ]

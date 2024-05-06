@@ -70,7 +70,7 @@ const AGFenceService = async () => {
         <>
             <AGTitleServices title="AG Fence Services" />
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 w-[80%]">
                     <h2 className="text-xl font-bold mt-6 mb-2">{fenceSection.title}</h2>
                     {fenceSection.description.map((desc:any, index:any) => (
                         <p key={index} className="my-4">{desc}</p>
@@ -106,7 +106,7 @@ const AGFenceService = async () => {
             
             <div className="flex flex-col items-center justify-center">
                 {freeEstimate.map((option: any) => (
-                    <div key={option.id} className={`bg-green-600 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer w-auto mb-4`}>
+                    <div key={option.id} className={`bg-green-600 sm:w-44 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer  mb-4`}>
                         <a href={option.href} className="flex justify-center items-center space-x-2 hover:underline">
                             <FaPhone className="text-white" />
                             <span>{option.text}</span>

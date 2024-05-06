@@ -72,7 +72,7 @@ const AGDeckService = async () => {
             <AGTitleServices title="AG Decs Services" />
 
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
-                <div className="lg:w-1/2">
+                <div className="lg:w-1/2  w-[80%]">
                     <h2 className="text-xl font-bold mt-6 mb-2">{deckSection.title}</h2>
                     {deckSection.description.map((desc:any, index:any) => (
                         <p key={index} className="my-4">{desc}</p>

@@ -11,7 +11,7 @@ const SeoSchema = new Schema({
     keywords: String
 });
 
-// Define the schema for the individual deck home items
+// Define the schema for the individual interior home items
 const InteriorHomeItemSchema = new Schema({
     id: String,
     content: String,
@@ -29,11 +29,20 @@ const FreeEstimateSchema = new Schema({
     _id: false
 });
 
-// Main schema for the deck section
+// Define the schema for the interior section details
+const InteriorSectionDetailsSchema = new Schema({
+    title: String,
+    description: [String] // Array of strings to store multiple paragraphs
+}, {
+    _id: false // Prevent _id creation for subdocuments if not necessary
+});
+
+// Main schema for the interior section
 const InteriorSectionSchema = new Schema({
     seo: SeoSchema,
     interiorhome: [InteriorHomeItemSchema],
-    freeEstimate: [FreeEstimateSchema]
+    freeEstimate: [FreeEstimateSchema],
+    interiorSection: InteriorSectionDetailsSchema
 }, {
     collection: 'interiorsections' // Specify the MongoDB collection name
 });

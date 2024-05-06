@@ -1,14 +1,18 @@
 {
     "seo": {
-        "title": "Exterior remodelation | agfencingllc | Construction Service in Glen burnie, MD",
-        "metaDescription": "agfencingllc offers interior construction service in Baltimore, MD. Call us now at (443) 628-9734 for a free estimate.",
-        "keywords": "deck construction, deck construction service, deck construction in Baltimore, deck construction service in Baltimore, deck construction near me, deck construction company, deck construction company in Baltimore, deck construction contractor, deck construction contractor in Baltimore, deck construction contractor near me"
+        "title": "Exterior Remodeling Service | AG Fencing LLC. | Glen Burnie, MD",
+        "metaDescription": "Are you looking to hire an exterior remodeling service? Our team at AG Fencing offers customized solutions to improve the appearance and functionality of your property's exterior spaces. Find out more!",
+        "keywords": "exterior remodeling service, custom outdoor spaces, remodeling service."
+    },
+    "exteriorSection": {
+        "title": "Transform the look of your property with our exterior remodeling services in Glen Burnie, MD",
+        "description": [
+            "Breathe new life into your home from the outside with the help of AG Fencing LLC. Our team of exterior remodeling service specialists is dedicated to improving the look and functionality of your outdoor spaces to suit your lifestyle.",
+            "We collaborate closely with you to comprehend your remodeling needs and aspirations. Our aim is to guide you through every step of the project, ensuring the results are not only visually striking but also resilient against the test of time.",
+            "At AG Fencing LLC, we take pride in our commitment to exceptional remodeling service. We are dedicated to ensuring your satisfaction at every stage of the remodeling process, always striving to surpass your expectations."
+        ]
     },
     "exteriorhome": [
-        {
-            "id": "description",
-            "content": "Our exterior remodeling service focuses on improving the appearance and functionality of the exterior areas of your property. Our team of exterior remodeling experts handles every aspect of the project, ensuring the results are visually stunning and resistant to the wear and tear of time."
-        },
         {
             "id": "telephone",
             "content": "Tel: (443) 628-9734",
@@ -31,7 +35,7 @@
     "freeEstimate": [
         {
             "id": "free-estimate",
-            "text": "Call Us: (443) 628-9734",
+            "text": "Call Us",
             "href": "tel:+14436289734"
         }
     ]
