@@ -64,19 +64,18 @@ export async function generateMetadata(
 const AGFenceService = async () => {
 
     const { fencesections } = await getFenceData();
-    const { fencehome, freeEstimate, fencesection } = fencesections[0];
+    const { fencehome, freeEstimate, fenceSection } = fencesections[0];
 
     return (
         <>
             <AGTitleServices title="AG Fence Services" />
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
-                <div className="lg:w-1/2">
-                    
-                    {/* <h2 className="text-xl font-bold mt-6 mb-2">{fencesection.title}</h2>
-                    {fencesection.description.map((desc: any, index: any) => (
+            <div className="lg:w-1/2">
+                    <h2 className="text-xl font-bold mt-6 mb-2">{fenceSection.title}</h2>
+                    {fenceSection.description.map((desc:any, index:any) => (
                         <p key={index} className="my-4">{desc}</p>
                     ))}
-                    {fencehome.map((detail: any) => (
+                    {fencehome.map((detail:any) => (
                         <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
                             {detail.id !== 'description' && (
                                 <div className="flex-shrink-0">
@@ -91,8 +90,8 @@ const AGFenceService = async () => {
                                 <p className={`${detail.id === 'description' ? '' : 'ml-2'}`}>{detail.content}</p>
                             )}
                         </div>
-                    ))} */}
-
+                    ))}
+                    
                 </div>
                 <div className="lg:w-1/2 p-4">
                     <Image
@@ -104,8 +103,9 @@ const AGFenceService = async () => {
                     />
                 </div>
             </div>
+            
             <div className="flex flex-col items-center justify-center">
-                {freeEstimate?.length > 0 && freeEstimate.map((option: any) => (
+                {freeEstimate.map((option: any) => (
                     <div key={option.id} className={`bg-green-600 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer w-auto mb-4`}>
                         <a href={option.href} className="flex justify-center items-center space-x-2 hover:underline">
                             <FaPhone className="text-white" />
