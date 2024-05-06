@@ -11,12 +11,10 @@ const SeoSchema = new Schema({
     keywords: String
 });
 
-const Mixed = Schema.Types.Mixed;
-
-// Define the schema for the individual deck home items
+// Define the schema for individual home items (renamed from DeckHomeItemSchema for clarity)
 const FenceHomeItemSchema = new Schema({
     id: String,
-    content: Mixed,
+    content: String,
     href: String
 }, {
     _id: false // Prevent _id creation for subdocuments if not necessary
@@ -31,11 +29,20 @@ const FreeEstimateSchema = new Schema({
     _id: false
 });
 
-// Main schema for the deck section
+// Define the schema for the fence section
+const FenceSectionDetailsSchema = new Schema({
+    title: String,
+    description: [String] // Array of strings to store multiple paragraphs
+}, {
+    _id: false // Prevent _id creation for subdocuments if not necessary
+});
+
+// Main schema for the fence section
 const FenceSectionSchema = new Schema({
     seo: SeoSchema,
     fencehome: [FenceHomeItemSchema],
-    freeEstimate: [FreeEstimateSchema]
+    freeEstimate: [FreeEstimateSchema],
+    fenceSection: FenceSectionDetailsSchema
 }, {
     collection: 'fencesections' // Specify the MongoDB collection name
 });

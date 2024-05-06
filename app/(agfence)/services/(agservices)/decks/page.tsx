@@ -65,16 +65,20 @@ export async function generateMetadata(
 const AGDeckService = async () => {
 
     const { decksections } = await getDeckData();
-    const { deckhome, freeEstimate } = decksections[0];
+    const { deckhome, freeEstimate, deckSection } = decksections[0];
 
     return (
         <>
-            <AGTitleServices title="AG Deck Services" />
+            <AGTitleServices title="AG Decs Services" />
 
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
-                <div className="lg:w-1/2 p-4">
-                    <h2 className="text-2xl font-bold mb-4">Decks Building</h2>
-                    {/* {deckhome.map((detail: any) => (
+                <div className="lg:w-1/2">
+                    {/* Render the deckSection title and descriptions */}
+                    <h2 className="text-xl font-bold mt-6 mb-2">{deckSection.title}</h2>
+                    {deckSection.description.map((desc:any, index:any) => (
+                        <p key={index} className="my-4">{desc}</p>
+                    ))}
+                    {deckhome.map((detail:any) => (
                         <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
                             {detail.id !== 'description' && (
                                 <div className="flex-shrink-0">
@@ -89,14 +93,16 @@ const AGDeckService = async () => {
                                 <p className={`${detail.id === 'description' ? '' : 'ml-2'}`}>{detail.content}</p>
                             )}
                         </div>
-                    ))} */}
+                    ))}
+                    
                 </div>
+
                 <div className="lg:w-1/2 p-4">
                     <Image
                         src="/assets/deck/deck.webp"
                         alt="Fencing"
-                        width={640} // Adjust the size as necessary
-                        height={360} // Adjust the size as necessary
+                        width={640}
+                        height={360}
                         layout="responsive"
                     />
                 </div>

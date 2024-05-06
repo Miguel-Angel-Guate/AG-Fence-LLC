@@ -4,6 +4,14 @@
         "metaDescription": "Are you looking to hire a deck-building service in Glen Burnie? Discover the custom solutions AG Fencing offers to create the deck of your dreams on your property. Learn more!",
         "keywords": "deck building service, decks in glen burnie, deck building experts, custom decks."
     },
+    "deckSection": {
+        "title": "Enjoy Outdoor Living with Our Dream Decks in Glen Burnie",
+        "description": [
+            "Our deck building experts combine functionality, style, and durability to create the perfect place to relax while enjoying the beauty of the outdoors with your family and friends. We make your dreams come true by building custom decks that fit your lifestyle and exceed your expectations.",
+            "With its exceptional expertise, the AG FENCING team is dedicated to creating beautiful outdoor spaces. Whether you envision a warm, traditional wood deck, a low-maintenance composite deck, or a modern deck with sleek finishes, our builders have the experience and resources to bring your vision to life.",
+            "We value your input and work closely with you from the initial design to the completion of your deck. This collaboration ensures that every detail is tailored to your preferences. We use only the highest quality materials and advanced construction techniques to provide a deck that meets and exceeds your expectations."
+        ]
+    },
     "deckhome": [
         {
             "id": "telephone",
@@ -27,16 +35,8 @@
     "freeEstimate": [
         {
             "id": "free-estimate",
-            "text": "443 628-9734",
+            "text": "Call Us",
             "href": "tel:+14436289734"
         }
-    ],
-    "deckSection": {
-        "title": "Enjoy Outdoor Living with Our Dream Decks in Glen Burnie",
-        "description": [
-            "Our deck building experts combine functionality, style, and durability to create the perfect place to relax while enjoying the beauty of the outdoors with your family and friends. We make your dreams come true by building custom decks that fit your lifestyle and exceed your expectations.",
-            "With its exceptional expertise, the AG FENCING team is dedicated to creating beautiful outdoor spaces. Whether you envision a warm, traditional wood deck, a low-maintenance composite deck, or a modern deck with sleek finishes, our builders have the experience and resources to bring your vision to life.",
-            "We value your input and work closely with you from the initial design to the completion of your deck. This collaboration ensures that every detail is tailored to your preferences. We use only the highest quality materials and advanced construction techniques to provide a deck that meets and exceeds your expectations."
-        ]
-    }
+    ]
 }

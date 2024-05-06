@@ -64,42 +64,34 @@ export async function generateMetadata(
 const AGFenceService = async () => {
 
     const { fencesections } = await getFenceData();
-    const { fencehome, freeEstimate } = fencesections[0];
-    const { title } = fencehome[0];
+    const { fencehome, freeEstimate, fencesection } = fencesections[0];
 
     return (
         <>
             <AGTitleServices title="AG Fence Services" />
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
-                <div className="lg:w-1/2 p-4">
-                    <h2 className="text-2xl font-bold mb-4">{title}</h2>
-                    {fencehome.map((detail: any) => (
-                        detail.content && (
-                            <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
-                                {detail.content !== '' && detail.id !== 'description' && (
-                                    <div className="flex-shrink-0">
-                                        <FaRegCheckCircle className="text-green-500 mr-2" />
-                                    </div>
-                                )}
-                                {detail.href ? (
-                                    <a href={detail.href} className={`ml-2 hover:underline`} target="_blank" rel="noopener noreferrer">
-                                        {detail.content}
-                                    </a>
-                                ) : (
-                                    detail.id === 'description' ? (
-                                        <div className="flex flex-col">
-                                            <p>{detail.content.firstDescrirption}</p> <br />
-                                            <p>{detail.content.secondDescription}</p> <br />
-                                            <p className="hidden sm:block">{detail.content.thirdDescription}</p> 
-                                        </div>
-                                    ) : (
-                                        <p className="ml-2">{detail.content}</p>
-                                    )
-                                )}
-                            </div>
-                        )
+                <div className="lg:w-1/2">
+                    
+                    {/* <h2 className="text-xl font-bold mt-6 mb-2">{fencesection.title}</h2>
+                    {fencesection.description.map((desc: any, index: any) => (
+                        <p key={index} className="my-4">{desc}</p>
                     ))}
-
+                    {fencehome.map((detail: any) => (
+                        <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
+                            {detail.id !== 'description' && (
+                                <div className="flex-shrink-0">
+                                    <FaRegCheckCircle className="text-green-500 mr-2" />
+                                </div>
+                            )}
+                            {detail.href ? (
+                                <a href={detail.href} className={`ml-2 hover:underline`} target="_blank" rel="noopener noreferrer">
+                                    {detail.content}
+                                </a>
+                            ) : (
+                                <p className={`${detail.id === 'description' ? '' : 'ml-2'}`}>{detail.content}</p>
+                            )}
+                        </div>
+                    ))} */}
 
                 </div>
                 <div className="lg:w-1/2 p-4">
