@@ -108,7 +108,7 @@ const AGDeckService = async () => {
             </div>
             <div className="flex flex-col items-center justify-center">
                 {freeEstimate.map((option: any) => (
-                    <div key={option.id} className={`bg-green-600 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer w-auto mb-4`}>
+                    <div key={option.id} className={`bg-green-600 sm:w-44 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer  mb-4`}>
                         <a href={option.href} className="flex justify-center items-center space-x-2 hover:underline">
                             <FaPhone className="text-white" />
                             <span>{option.text}</span>

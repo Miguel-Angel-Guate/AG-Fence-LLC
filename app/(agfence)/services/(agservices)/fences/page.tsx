@@ -70,12 +70,12 @@ const AGFenceService = async () => {
         <>
             <AGTitleServices title="AG Fence Services" />
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
-            <div className="lg:w-1/2 w-[80%]">
+                <div className="lg:w-1/2 w-[80%]">
                     <h2 className="text-xl font-bold mt-6 mb-2">{fenceSection.title}</h2>
-                    {fenceSection.description.map((desc:any, index:any) => (
+                    {fenceSection.description.map((desc: any, index: any) => (
                         <p key={index} className="my-4">{desc}</p>
                     ))}
-                    {fencehome.map((detail:any) => (
+                    {fencehome.map((detail: any) => (
                         <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
                             {detail.id !== 'description' && (
                                 <div className="flex-shrink-0">
@@ -91,7 +91,7 @@ const AGFenceService = async () => {
                             )}
                         </div>
                     ))}
-                    
+
                 </div>
                 <div className="lg:w-1/2 p-4">
                     <Image
@@ -103,7 +103,7 @@ const AGFenceService = async () => {
                     />
                 </div>
             </div>
-            
+
             <div className="flex flex-col items-center justify-center">
                 {freeEstimate.map((option: any) => (
                     <div key={option.id} className={`bg-green-600 sm:w-44 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer  mb-4`}>

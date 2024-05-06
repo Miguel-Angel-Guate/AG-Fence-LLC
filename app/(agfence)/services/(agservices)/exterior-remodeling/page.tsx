@@ -63,13 +63,16 @@ export async function generateMetadata(
 
 const AGRemodelationExterior = async () => {
     const { exteriorsections } = await getExteriorData();
-    const { exteriorhome, freeEstimate } = exteriorsections[0];
+    const { exteriorhome, freeEstimate, exteriorsection } = exteriorsections[0];
     return (
         <>
             <AGTitleServices title="AG Remodelation Exterior Services" />
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
-                <div className="lg:w-1/2 p-4">
-                    <h2 className="text-2xl font-bold mb-4">Exterior remodeling</h2>
+               {/*  <div className="lg:w-1/2 w-[80%]">
+                    <h2 className="text-xl font-bold mt-6 mb-2">{exteriorsection.title}</h2>
+                    {exteriorsection.description.map((desc: any, index: any) => (
+                        <p key={index} className="my-4">{desc}</p>
+                    ))}
                     {exteriorhome.map((detail: any) => (
                         <div key={detail.id} className={`flex ${detail.id === 'description' ? 'flex-col' : 'items-center'} mb-4`}>
                             {detail.id !== 'description' && (
@@ -86,7 +89,8 @@ const AGRemodelationExterior = async () => {
                             )}
                         </div>
                     ))}
-                </div>
+
+                </div> */}
                 <div className="lg:w-1/2 p-4">
                     <Image
                         src="/assets/exterior/exterior.webp"
@@ -98,8 +102,8 @@ const AGRemodelationExterior = async () => {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center">
-                {freeEstimate?.length > 0 && freeEstimate.map((option: any) => (
-                    <div key={option.id} className={`bg-green-600 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer w-auto mb-4`}>
+                {freeEstimate.map((option: any) => (
+                    <div key={option.id} className={`bg-green-600 sm:w-44 text-white text-center p-4 rounded-md hover:bg-green-600 cursor-pointer  mb-4`}>
                         <a href={option.href} className="flex justify-center items-center space-x-2 hover:underline">
                             <FaPhone className="text-white" />
                             <span>{option.text}</span>
