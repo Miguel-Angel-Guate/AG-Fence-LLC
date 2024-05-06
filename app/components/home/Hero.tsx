@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 const getAGFenceHome = async () => {
 
@@ -19,15 +20,18 @@ const Hero = async () => {
   const { agfencedata } = await getAGFenceHome()
   const { hero } = agfencedata[0].home;
 
-  const { title, subtitle, description, subDescription } = hero;
+  const { title, subtitle, description, subDescription, button, link } = hero;
   return (
     <div className="h-[30vh]  sm:h-[500px] w-full justify-center flex items-center sm:justify-start bg-cover   bg-center" style={{ backgroundImage: `url('/assets/home/hero.webp')` }}>
       <div className="sm:w-[50vw] sm:h-[50vh] sm:ml-14 flex sm:items-center sm:justify-center sm:bg-white sm:bg-opacity-70 rounded-lg shadow-md">
-        <div className='sm:w-[48vw]'>
+        <div className='sm:w-[48vw] flex flex-wrap justify-center'>
           <h2 className="text-lg text-white text-center sm:text-primary  font-semibold">{subtitle}</h2>
           <h1 className="text-4xl tex sm:text-4xl text-center text-primary sm:text-black font-bold mt-2 mb-4">{title}</h1>
           <p className="hidden sm:block text-base text-white sm:text-black mb-4">{description}</p>
           <p className="hidden sm:block text-base text-white sm:text-black">{subDescription}</p>
+          <Link href={link}>
+          <button className=" bg-black w-28  sm:bg-primary flex justify-center sm:w-24  rounded-sm  text-white cursor-pointer">{button}</button>
+          </Link>
         </div>
 
       </div>

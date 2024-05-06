@@ -1,18 +1,20 @@
 {
     "seo": {
-        "title": "Fencing Contractor in Glen burnie, MD | AG Fencing LLC",
-        "metaDescription": "AG Fencing LLC offers deck construction services in Baltimore, MD. We build custom decks using natural wood, composite materials, and vinyl. Call us for a free estimate!",
-        "keywords": "fencing construction, deck construction service, deck construction in Baltimore, deck construction service in Baltimore, deck construction near me, deck construction company, deck construction company in Baltimore, deck construction contractor, deck construction contractor in Baltimore, deck construction contractor near me"
+        "title": "Fence Construction Service | AG Fencing LLC | Glen Burnie, MD",
+        "metaDescription": "Are you looking for a solution to add security to your property? Our fence construction service offers many high-quality options to meet your needs. See more!",
+        "keywords": "fence construction service, fences in Glen Burnie, fence construction."
     },
     "fencehome": [
+       {
+        "title": "Protect the privacy of your property with our fences in Glen Burnie."
+       },
         {
             "id": "description",
-            "content": "Our fence construction service is designed to transform your outdoor space into an oasis of relaxation and entertainment. We offer a wide range of material options, from natural wood to composite materials and vinyl, to suit your style and maintenance preferences."
-        },
-        {
-            "id": "telephone",
-            "content": "Tel: (443) 628-9734",
-            "href": "tel:+14436289734"
+            "content": {
+                "firstDescrirption": "Our fence building service transforms your outdoor space into a beautiful place while providing you with the security you need. We offer a variety of fences in different styles, designs, and finishes to provide you with precisely the option you're looking for.",
+                "secondDescription": "The experts at AG FENCING carefully select the best materials for fence construction and use state-of-the-art installation techniques to ensure it can withstand different elements and be durable over time.",
+                "thirdDescription": "Our highly skilled team, with their in-depth knowledge and experience, works closely with you to understand your goals. They provide expert recommendations, empowering you to make informed decisions for changes to your property. Whether you prefer a classic wood fence, a low-maintenance vinyl fence, or a sleek, modern aluminum fence for your space, we have the expertise to deliver."
+            }
         },
         {
             "id": "email",
@@ -31,7 +33,7 @@
     "freeEstimate": [
         {
             "id": "free-estimate",
-            "text": "Call Us: (443) 628-9734",
+            "text": "Call Us",
             "href": "tel:+14436289734"
         }
     ]

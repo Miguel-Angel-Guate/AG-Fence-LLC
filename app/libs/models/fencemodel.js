@@ -11,10 +11,12 @@ const SeoSchema = new Schema({
     keywords: String
 });
 
+const Mixed = Schema.Types.Mixed;
+
 // Define the schema for the individual deck home items
 const FenceHomeItemSchema = new Schema({
     id: String,
-    content: String,
+    content: Mixed,
     href: String
 }, {
     _id: false // Prevent _id creation for subdocuments if not necessary
