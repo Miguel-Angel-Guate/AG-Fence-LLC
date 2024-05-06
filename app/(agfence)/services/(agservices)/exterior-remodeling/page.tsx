@@ -63,14 +63,14 @@ export async function generateMetadata(
 
 const AGRemodelationExterior = async () => {
     const { exteriorsections } = await getExteriorData();
-    const { exteriorhome, freeEstimate, exteriorsection } = exteriorsections[0];
+    const { exteriorhome, freeEstimate, exteriorSection } = exteriorsections[0];
     return (
         <>
             <AGTitleServices title="AG Remodelation Exterior Services" />
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
-               {/*  <div className="lg:w-1/2 w-[80%]">
-                    <h2 className="text-xl font-bold mt-6 mb-2">{exteriorsection.title}</h2>
-                    {exteriorsection.description.map((desc: any, index: any) => (
+                <div className="lg:w-1/2 w-[80%]">
+                    <h2 className="text-xl font-bold mt-6 mb-2">{exteriorSection.title}</h2>
+                    {exteriorSection.description.map((desc: any, index: any) => (
                         <p key={index} className="my-4">{desc}</p>
                     ))}
                     {exteriorhome.map((detail: any) => (
@@ -90,7 +90,7 @@ const AGRemodelationExterior = async () => {
                         </div>
                     ))}
 
-                </div> */}
+                </div>
                 <div className="lg:w-1/2 p-4">
                     <Image
                         src="/assets/exterior/exterior.webp"
