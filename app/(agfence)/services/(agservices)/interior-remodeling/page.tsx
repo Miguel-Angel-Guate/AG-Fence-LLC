@@ -70,7 +70,7 @@ const AGRemodelation = async () => {
             <AGTitleServices title="AG Remodeling Interior" />
             <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start py-8">
                 <div className="lg:w-1/2 w-[80%]">
-                    <h2 className="text-xl font-bold mt-6 mb-2">{interiorSection.title}</h2>
+                    <h2 className="sm:text-xl text-base font-bold mt-6 mb-2">{interiorSection.title}</h2>
                     {interiorSection.description.map((desc: any, index: any) => (
                         <p key={index} className="my-4">{desc}</p>
                     ))}
