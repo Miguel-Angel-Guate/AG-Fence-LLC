@@ -32,6 +32,7 @@ const EstimateSectionSchema = new Schema({
     subtitle: String,
     title: String,
     gettingtouch: String,
+    href: String,
     barguarantee: BarguaranteeSchema,
 });
 
@@ -49,8 +50,16 @@ const HeroSectionSchema = new Schema({
     commitments: [String],
 });
 
+const HeroHeaderSchema = new Schema({
+    title: String,
+    subtitle: String,
+    description: String,
+
+});
+
 const AboutSectionSchema = new Schema({
     hero: HeroSectionSchema,
+    heroheader: HeroHeaderSchema,
     information: InformationSectionSchema,
     estimadetsection: EstimateSectionSchema,
     additionalinfo: AdditionalInfoSectionSchema,
