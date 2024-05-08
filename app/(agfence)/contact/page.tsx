@@ -75,8 +75,8 @@ const AGFenceContact = async () => {
                     <a href={contactFormSection.href} className="w-auto rounded-sm p-2 text-white justify-center flex bg-primary">{contactFormSection.button}</a>
 
                 </div>
-                <div className="sm:flex-1 px-4 py-8">
-                    <div className="relative w-full h-64 sm:h-auto">
+                <div className="sm:flex-1">
+                    <div className="relative w-full">
 
                         <Image
                             src={"/assets/contact/contactus.webp"}

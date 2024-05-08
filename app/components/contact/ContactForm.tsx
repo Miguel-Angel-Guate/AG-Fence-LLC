@@ -22,7 +22,7 @@ const AGContactForm = ({ formFields, formLeyends }: any) => {
 
     return (
         <div className="bg-white p-6 sm:p-12">
-            <h2 className="text-2xl font-bold text-center mb-4">{formLeyends?.title}</h2>
+            <h2 className="text-2xl text-primary font-bold text-center mb-4">{formLeyends?.title}</h2>
             <p className="text-center mb-8">{formLeyends?.subtitle}</p>
             <form className="max-w-2xl mx-auto" onSubmit={handleSubmit(handleFormSubmit)}>
                 {formFields.map((field: any) => (
