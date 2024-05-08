@@ -1,44 +1,44 @@
 {
     "legends": {
-        "title": "What Customers Say",
+        "title": "Discover Our Customers Testimonials of  AG Fencing LLC",
         "subtitle": "Read what our clients have to say about our landscaping and fencing services.",
         "showMore": "Show More",
         "showLess": "Show Less"
     },
     "seo": {
-        "title": "Testimonials | Landscaping & Fencing Services | Green Thumb Landscaping",
-        "description": "Read what our clients have to say about our landscaping and fencing services. We take pride in delivering exceptional results and customer satisfaction.",
-        "keywords": "testimonials, reviews, landscaping, fencing, clients, customer satisfaction"
+        "title": "Reviews from Satisfied Customers | AG Fencing LLC | Outdoor Services & Fencing Services",
+        "description": "Discover testimonials from our satisfied customers. Read reviews about our fencing services, deck building, interior remodeling, and exterior remodeling. Trust our experience to transform your home!",
+        "keywords": "fence service, custom deck, interior remodeling, exterior remodel, fence installation, remodeling service."
     },
     "reviews": [
         {
-            "name": "Jane Doe",
-            "location": "Los Angeles",
-            "comment": "The service was outstanding! Thank you for making our backyard a dream come true.",
+            "name": "- Sarah Anderson",
+            "location": "Glen Burnie, MD",
+            "comment": "The fence service provided by AG Fencing exceeded my expectations for quality and durability",
             "date": "2023-03-01"
         },
         {
-            "name": "John Smith",
-            "location": "New York",
-            "comment": "Professional team, excellent craftsmanship. Highly recommended.",
+            "name": "- Emily Johnson",
+            "location": "Glen Burnie, MD",
+            "comment": "My new custom deck, built by the company, is the perfect place to relax outdoors.",
             "date": "2023-03-05"
         },
         {
-            "name": "Alice Johnson",
-            "location": "Chicago",
-            "comment": "Our new deck is gorgeous! We can't wait to host our friends and family.",
+            "name": "- Michael Davis",
+            "location": "Green Haven, MD",
+            "comment": "The interior remodeling done by the AG Fencing team transformed my home into a modern and inviting space.",
             "date": "2023-03-10"
         },
         {
-            "name": "Omar Hassan",
-            "location": "Miami",
-            "comment": "Great value for money. They finished the work ahead of schedule without compromising quality.",
+            "name": "- Jennifer Thompson",
+            "location": "Glen Burnie, MD",
+            "comment": "Thanks to the experts at AG Fencing for surprising me with the exterior remodel of my home. The result is incredible!",
             "date": "2023-03-15"
         },
         {
-            "name": "Samantha Green",
-            "location": "Seattle",
-            "comment": "Very pleased with the fence installation. It looks sturdy and elegant!",
+            "name": "- David Wilson",
+            "location": "Green Haven, MD",
+            "comment": "The fence installation by AG Fencing provides privacy and enhances the appearance of my property.",
             "date": "2023-03-20"
         },
         {

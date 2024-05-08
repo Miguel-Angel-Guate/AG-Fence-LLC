@@ -119,9 +119,10 @@ interface Barguarantee {
 }
 
 interface EstimadetSection {
-  subtitle: string;
+subtitle: string;
 title: string;
 gettingtouch: string;
+href: string;
 barguarantee: {
   [key: string]: Barguarantee;
 };

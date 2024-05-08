@@ -42,13 +42,13 @@ const ReviewsData = ({reviews, legends}:any) => {
     const displayedReviews = visibleCount === 1 ? [reviews[currentIndex]] : reviews.slice(0, visibleCount);
 
     return (
-        <div className="bg-white text-black p-8 relative flex flex-col items-center">
+        <div className="bg-white text-black p-10  mt-3 relative flex flex-col items-center">
             <div className="absolute top-0 right-0 p-4">
                 <span className="text-sm bg-primary py-1 px-3 rounded-full">
                     {visibleCount === 1 ? `Review ${currentIndex + 1} of ${reviews.length}` : `Showing ${visibleCount} of ${reviews.length}`}
                 </span>
             </div>
-            <h2 className="text-4xl font-bold mb-6">{legends.title}</h2>
+            <h2 className="text-base sm:text-4xl font-bold mb-6">{legends.title}</h2>
 
             <div className={`w-full ${visibleCount > 1 ? 'flex flex-wrap gap-4 justify-center items-stretch' : 'flex flex-col items-center'}`}>
                 {displayedReviews.map((review:any, index:any)  => (

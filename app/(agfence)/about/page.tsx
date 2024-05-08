@@ -36,11 +36,11 @@ export async function generateMetadata(
     { params, searchParams }: Props,
     parent: ResolvingMetadata
 ): Promise<Metadata> {
-   
+
 
     const { aboutsections } = await getHero()
     const { seo } = aboutsections[0];
-    
+
     const url = new URL('/about', process.env.NEXT_PUBLIC_BASE_URL);
 
     return {
@@ -70,8 +70,9 @@ export async function generateMetadata(
 const AGFenceAbout = async () => {
 
     const { aboutsections } = await getHero();
-    const { hero } = aboutsections[0];
 
+    const { hero, heroHeader } = aboutsections[0];
+    
     const images = [
         '/assets/about/hero/hero1.webp',
         '/assets/about/hero/hero2.webp',
@@ -83,9 +84,21 @@ const AGFenceAbout = async () => {
 
     return (
         <>
-            <div className="container mx-auto p-4">
+
+            {/* <div className="flex flex-col items-center justify-center bg-white p-4 md:p-8">
+                <div className="mb-2">
+                    <h2 className="text-lg text-primary">{heroHeader.subtitle}</h2>
+                </div>
+                <div className="mb-2">
+                    <h1 className="text-2xl md:text-4xl font-bold text-center">{heroHeader.title}</h1>
+                </div>
+                <div>
+                    <p className="text-md sm:text-base text-gray-700 text-center">{heroHeader.description}</p>
+                </div>
+            </div> */}
+            <div className="container mx-auto mb-3">
                 <section className="flex flex-col-reverse lg:flex-row text-center lg:text-left lg:items-center lg:justify-between">
-                    <div className="lg:w-1/2 space-y-4">
+                    <div className="w-full space-y-4 md:w-1/2">
                         <p className="text-primary">{hero.subtitle}</p>
                         <h1 className="text-2xl font-bold">{hero.title}</h1>
                         <p>{hero.description}</p>

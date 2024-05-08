@@ -36,9 +36,9 @@ const AGAboutEstimated = async () => {
                 <div className=" flex flex-col items-center">
                     <h2 className="text-3xl font-bold text-gray-800">{estimadetsection.subtitle}</h2>
                     <p className="text-xl text-gray-600 mt-2 mb-4">{estimadetsection.title}</p>
-                    <button className="bg-green-500 text-white text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+                    <a href={estimadetsection.href} className="bg-green-500 text-white text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" >
                         {estimadetsection.gettingtouch}
-                    </button>
+                    </a>
                 </div>
                 {/* Progress Bars */}
                 {Object.entries(estimadetsection.barguarantee).map(([key, bar]: [string, { title: string, value: number }]) => {

@@ -33,7 +33,15 @@ const contactFormSectionSchema = new Schema({
         type: String,
         required: true
     },
-    image: {
+    description: {
+        type: String,
+        required: true
+    },
+    buttonText: {
+        type: String,
+        required: true
+    },
+    href: {
         type: String,
         required: true
     }
