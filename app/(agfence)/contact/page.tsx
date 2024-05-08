@@ -64,13 +64,15 @@ export async function generateMetadata(
 const AGFenceContact = async () => {
     const { contactsections } = await getContactData();
     const { contactFormSection, formFields, formLeyends } = contactsections[0];
+    
 
     return (
         <>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
-                <div className="sm:flex-1 px-4 py-8">
-                    <h2 className="text-2xl font-bold mb-4">{contactFormSection.title}</h2>
-                    <p className="mb-4">{contactFormSection.subtitle}</p>
+            <div className="flex justify-center flex-col sm:flex-row items-center sm:items-center text-center sm:text-left">
+                <div className="sm:flex-1  flex flex-col justify-center flex-wrap items-center px-4 py-8">
+                    <h2 className="text-2xl text-primary font-bold mb-4">{contactFormSection.title}</h2>
+                    <p className="mb-4 flex">{contactFormSection.subtitle}</p>
+                    <a href={contactFormSection.href} className="w-auto rounded-sm p-2 text-white justify-center flex bg-primary">{contactFormSection.button}</a>
 
                 </div>
                 <div className="sm:flex-1 px-4 py-8">

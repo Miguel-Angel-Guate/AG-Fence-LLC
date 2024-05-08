@@ -57,7 +57,7 @@ const ReviewsData = ({reviews, legends}:any) => {
                             <FaPerson size={32} />
                         </div>
                         <p className="mb-4">{review.comment}</p>
-                        <p className="font-bold">{review.name}, {review.location}</p>
+                        <p className="font-bold text-sm">{review.name}, {review.location}</p>
                         <p className="text-sm">{review.date}</p>
                     </div>
                 ))}
