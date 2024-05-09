@@ -16,7 +16,6 @@ const mostRecentReview = sortedReviews[0];
 
     const nextReview = () => {
         setCurrentIndex((prevIndex) => {
-            // Ensure the index does not exceed the bounds when showing a single review.
             if (visibleCount === 1 && prevIndex < reviews.length - 1) {
                 return prevIndex + 1;
             }
@@ -50,7 +49,7 @@ const mostRecentReview = sortedReviews[0];
 
     return (
 
-        <div className="  text-black p-10  flex justify-center flex-wrap items-center">
+        <div className="  text-black p-4  2xl:min-h-[60vh] flex justify-center flex-wrap items-center">
             <div className="w-full flex justify-end mb-2">
                 <span className="text-sm bg-primary py-1 px-3 rounded-full">
                     {visibleCount === 1 ? `Review ${currentIndex + 1} of ${reviews.length}` : `Showing ${visibleCount} of ${reviews.length}`}
