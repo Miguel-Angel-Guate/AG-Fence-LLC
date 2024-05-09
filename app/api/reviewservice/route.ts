@@ -29,8 +29,8 @@ export async function POST(request:NextRequest) {
     const data = await request.json(); // Get data from the request body
 
     try {
-        // Assuming you have a specific document to update, you may need its ID.
-        const reviewSectionId = '663cb231a34e3bf84d4a899b'; // This needs to be set according to your application's logic
+        
+        const reviewSectionId = process.env.ID_REVIEWS_UPDATE_SECTIONS;
         const review = {
             name: data.name,
             location: data.location,
