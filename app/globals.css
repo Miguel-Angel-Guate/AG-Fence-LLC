@@ -17,3 +17,15 @@
 .nahum-gothic {
     font-family: 'Nahum Gothic', sans-serif;
 }
+
+.half-star::before {
+    content: "★";
+    position: relative;
+}
+
+.half-star::after {
+    content: "☆";
+    position: absolute;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    color: gray;
+}
