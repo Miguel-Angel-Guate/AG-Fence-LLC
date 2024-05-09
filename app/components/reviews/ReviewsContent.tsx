@@ -8,7 +8,7 @@ import WritteReview from "./WritteReview";
 
 
 const ReviewsData = ({ reviews, legends }: any) => {
-    
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleCount, setVisibleCount] = useState(1);
@@ -46,19 +46,13 @@ const ReviewsData = ({ reviews, legends }: any) => {
     // Adjusted to handle both single and multiple reviews visibility.
     const displayedReviews = visibleCount === 1 ? [reviews[currentIndex]] : reviews.slice(0, visibleCount);
 
-    
+
 
     return (
         <>
-        <div>
-            <button onClick={() => setIsModalOpen(true)}>Leave us a Review</button>
             <WritteReview
                 writeReviewTitle="Leave us a Review"
-                isOpen={isModalOpen}
-                setIsOpen={setIsModalOpen}
             />
-        </div>
-            {/* <WritteReview writteReviewTitle="Leave us a Review" /> */}
 
             <div className="  text-black p-4  2xl:min-h-[60vh] flex justify-center flex-wrap items-center">
                 <div className="w-full flex justify-end mb-2">
