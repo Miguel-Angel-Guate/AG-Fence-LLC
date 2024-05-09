@@ -16,9 +16,6 @@ const WritteReview = ({ writeReviewTitle }: any) => {
         setHoverRating(newHoverRating);
     };
 
-    const handleMouseLeave = () => {
-        setHoverRating(0);
-    };
 
     const handleRating = (rate: any) => {
         setValue("rating", rate);
@@ -28,9 +25,26 @@ const WritteReview = ({ writeReviewTitle }: any) => {
         console.log(data);
         // Submit your data to your API here
     };
-    const submitReview = (data: any) => {
-        console.log(data);
+    const submitReview = async (data: any) => {
+
+        try {
+            const response = await fetch('/api/reviewservice', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            const reviews = await response.json();
+            console.log('Reviews after submission:', reviews);
+            // Handle state update or actions after submission
+        } catch (error) {
+            console.error('Failed to submit review:', error);
+        }
     }
+
+
+
     return (
         <>
             <button onClick={() => setIsOpen(true)}>Leave us a Review</button>

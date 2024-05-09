@@ -1,7 +1,6 @@
 import connectMongoDB from '@/app/libs/mongodb'
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import Reviewssections from '@/app/libs/models/reviewsmodel';
-import mongoose from 'mongoose';
 /* import mongoose from 'mongoose'; */
 
 
@@ -23,3 +22,34 @@ export async function GET() {
         });
     }
 }
+
+
+export async function POST(request:NextRequest) {
+    await connectMongoDB(); // Ensure the DB connection is ready
+    const data = await request.json(); // Get data from the request body
+
+    try {
+        // Assuming you have a specific document to update, you may need its ID.
+        const reviewSectionId = '663cb231a34e3bf84d4a899b'; // This needs to be set according to your application's logic
+        const review = {
+            name: data.name,
+            location: data.location,
+            comment: data.comment,
+            date: new Date(data.date), // Assuming date is correctly formatted
+            rating: data.rating
+        };
+
+        // Find the document and update it by pushing to the reviews array
+        const updatedReviewSection = await Reviewssections.findByIdAndUpdate(
+            reviewSectionId,
+            { $push: { reviews: review } },
+            { new: true } // Return the updated document
+        );
+
+        return NextResponse.json({ message: 'Review added successfully', updatedReviewSection });
+    } catch (error) {
+        console.error('Error adding review:', error);
+        return NextResponse.json({ error: 'Failed to add review' }, { status: 500 });
+    }
+}
+
