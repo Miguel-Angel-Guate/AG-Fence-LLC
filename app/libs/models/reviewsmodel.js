@@ -7,7 +7,9 @@ const ReviewSchema = new Schema({
     name: String,
     location: String,
     comment: String,
-    date: String  // Consider using Date type if you're processing dates
+    date: String,
+    rating: Number
+
 });
 
 // Define the schema for the SEO data

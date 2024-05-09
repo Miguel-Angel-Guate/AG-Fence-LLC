@@ -42,7 +42,7 @@ const ReviewsData = ({ reviews, legends }: any) => {
     const displayedReviews = visibleCount === 1 ? [reviews[currentIndex]] : reviews.slice(0, visibleCount);
 
     return (
-        <>
+        
             <div className="  text-black p-10  flex justify-center flex-wrap items-center">
                 <div className="w-full flex justify-end mb-2">
                     <span className="text-sm bg-primary py-1 px-3 rounded-full">
@@ -59,8 +59,8 @@ const ReviewsData = ({ reviews, legends }: any) => {
                             </button>
                         )}
                         <div className={`w-full flex items-center ${visibleCount > 1 ? 'flex flex-wrap gap-4 justify-center items-stretch' : 'flex flex-col items-center'}`}>
-                            {displayedReviews.map((review: any, index: any) => (
-                                <div key={index} className="bg-primary flex flex-wrap items-center justify-center p-6 sm:max-h-80  rounded-lg shadow-lg text-center w-full sm:max-w-80">
+                            {displayedReviews.map((review: any) => (
+                                <div key={review.id} className="bg-primary flex flex-wrap items-center justify-center p-6 sm:max-h-80  rounded-lg shadow-lg text-center w-full sm:max-w-80">
                                     <div className="inline-block p-2 bg-orange-300 rounded-full mb-4">
                                         <FaPerson size={32} />
                                     </div>
@@ -87,7 +87,7 @@ const ReviewsData = ({ reviews, legends }: any) => {
                 </div>
 
             </div>
-        </>
+        
     )
 }
 
