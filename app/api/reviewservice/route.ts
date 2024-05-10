@@ -24,12 +24,12 @@ export async function GET() {
 }
 
 
-export async function POST(request:NextRequest) {
+export async function POST(request: NextRequest) {
     await connectMongoDB(); // Ensure the DB connection is ready
     const data = await request.json(); // Get data from the request body
 
     try {
-        
+
         const reviewSectionId = process.env.ID_REVIEWS_UPDATE_SECTIONS;
         const review = {
             name: data.name,
@@ -42,7 +42,14 @@ export async function POST(request:NextRequest) {
         // Find the document and update it by pushing to the reviews array
         const updatedReviewSection = await Reviewssections.findByIdAndUpdate(
             reviewSectionId,
-            { $push: { reviews: review } },
+            { 
+                $push: { 
+                    reviews: {
+                        $each: [review],
+                        $position: 0
+                    }
+                }
+            },
             { new: true } // Return the updated document
         );
 
