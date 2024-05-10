@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaStar } from 'react-icons/fa';
 import { Dialog } from '@headlessui/react';
+import moment from 'moment';
 const WritteReview = ({ writeReviewTitle }: any) => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -12,20 +13,19 @@ const WritteReview = ({ writeReviewTitle }: any) => {
     const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm();
     const rating = watch("rating");
 
-    const handleMouseOver = (newHoverRating: any) => {
-        setHoverRating(newHoverRating);
-    };
-
 
     const handleRating = (rate: any) => {
         setValue("rating", rate);
     };
 
-    const onSubmit = (data: any) => {
-        console.log(data);
-        // Submit your data to your API here
-    };
+
     const submitReview = async (data: any) => {
+        const formattedData = {
+            ...data,
+            date: moment(data.date).format('YYYY-MM-DD') // assuming 'data.date' comes from a date picker or similar input
+        };
+        console.log("🚀 ~ submitReview ~ formattedData:", formattedData)
+
 
         try {
             const response = await fetch('/api/reviewservice', {
@@ -33,7 +33,7 @@ const WritteReview = ({ writeReviewTitle }: any) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(formattedData)
             });
             const reviews = await response.json();
             console.log('Reviews after submission:', reviews);
