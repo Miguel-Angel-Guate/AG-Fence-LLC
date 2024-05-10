@@ -1,4 +1,6 @@
-
+"use server"
+import { revalidatePath } from "next/cache";
+revalidatePath('/reviews');
 import ReviewsData from "@/app/components/reviews/ReviewsContent";
 
 import { Metadata, ResolvingMetadata } from 'next'
@@ -10,12 +12,15 @@ type Props = {
 
 
 const getReviewsData = async () => {
+    "use server"
     try {
         const apiUrl = process.env.API_URL;
-        const response = await fetch(`${apiUrl}/api/reviewservice`);
+        const response = await fetch(`${apiUrl}/api/reviewservice`, { cache: 'no-store' }/* { next: { tags: ['reviews'] } } */);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
+        
+
         const data = await response.json();
 
         return data;
@@ -61,9 +66,10 @@ export async function generateMetadata(
 
 
 const AGFenceReviews = async () => {
+    
     const { reviewsections } = await getReviewsData()
     const { reviews, legends } = reviewsections[0];
-
+    
     return (
 
         <ReviewsData reviews={reviews} legends={legends} />

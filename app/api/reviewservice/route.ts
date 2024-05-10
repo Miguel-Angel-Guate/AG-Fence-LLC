@@ -30,7 +30,6 @@ export async function POST(request: NextRequest) {
 
     try {
 
-        const reviewSectionId = process.env.ID_REVIEWS_UPDATE_SECTIONS;
         const review = {
             name: data.name,
             location: data.location,
@@ -39,21 +38,19 @@ export async function POST(request: NextRequest) {
             rating: data.rating
         };
 
-        // Find the document and update it by pushing to the reviews array
-        const updatedReviewSection = await Reviewssections.findByIdAndUpdate(
-            reviewSectionId,
-            { 
-                $push: { 
-                    reviews: {
-                        $each: [review],
-                        $position: 0
-                    }
-                }
-            },
-            { new: true } // Return the updated document
+        // Insert the review at the start of the array
+        await Reviewssections.findByIdAndUpdate(
+            process.env.ID_REVIEWS_UPDATE_SECTIONS,
+            { $push: { reviews: { $each: [review], $position: 0 } } },
+            { new: true }
         );
 
-        return NextResponse.json({ message: 'Review added successfully', updatedReviewSection });
+        // After adding, fetch the latest reviews
+        const latestReviews = await Reviewssections.findOne({ _id: process.env.ID_REVIEWS_UPDATE_SECTIONS });
+        console.log("🚀 ~ POST ~ latestReviews:", latestReviews)
+
+        return NextResponse.json({ message: 'Review added successfully', latestReviews });
+        
     } catch (error) {
         console.error('Error adding review:', error);
         return NextResponse.json({ error: 'Failed to add review' }, { status: 500 });

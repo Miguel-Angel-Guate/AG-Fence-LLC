@@ -4,13 +4,14 @@ import { useForm } from 'react-hook-form';
 import { FaStar } from 'react-icons/fa';
 import { Dialog } from '@headlessui/react';
 import moment from 'moment';
-const WritteReview = ({ writeReviewTitle }: any) => {
 
-    const [isOpen, setIsOpen] = useState(false);
+
+const WritteReview = ({ writeReviewTitle, setReviewsUpdate }: any) => {
 
     const [hoverRating, setHoverRating] = useState(0);
     const [isReviewOpen, setIsReviewOpen] = useState(false);
     const [isThankYouOpen, setIsThankYouOpen] = useState(false);
+    
 
     const { register, handleSubmit, setValue, watch, reset, formState: { errors } } = useForm();
     const [userName, setUserName] = useState('');
@@ -23,13 +24,13 @@ const WritteReview = ({ writeReviewTitle }: any) => {
 
 
     const submitReview = async (data: any) => {
+
         setUserName(data.name.charAt(0).toUpperCase() + data.name.slice(1))
         const formattedData = {
             ...data,
             date: moment(data.date).format('YYYY-MM-DD') // assuming 'data.date' comes from a date picker or similar input
         };
-        console.log("🚀 ~ submitReview ~ formattedData:", formattedData)
-
+        
 
         try {
             const response = await fetch('/api/reviewservice', {
@@ -39,13 +40,15 @@ const WritteReview = ({ writeReviewTitle }: any) => {
                 },
                 body: JSON.stringify(formattedData)
             });
-            const reviews = await response.json();
-            console.log('Reviews after submission:', reviews);
 
+            const reviews = await response.json();
+            
             if (response.ok) {
+                setReviewsUpdate([...reviews.latestReviews.reviews]);
                 reset()
-                setIsReviewOpen(false); // Close review dialog
                 setIsThankYouOpen(true); // Open thank you dialog
+                setIsReviewOpen(false); // Close review dialog
+                reset();
                 
             } else {
                 throw new Error('Submission failed');
@@ -53,7 +56,8 @@ const WritteReview = ({ writeReviewTitle }: any) => {
             // Handle state update or actions after submission
         } catch (error) {
             console.error('Failed to submit review:', error);
-        }
+        };
+       
     }
 
 
