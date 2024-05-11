@@ -1,6 +1,7 @@
 import connectMongoDB from '@/app/libs/mongodb'
 import { NextRequest, NextResponse } from "next/server";
 import Reviewssections from '@/app/libs/models/reviewsmodel';
+/* import { revalidatePath } from 'next/cache'; */
 /* import mongoose from 'mongoose'; */
 
 
@@ -10,6 +11,7 @@ export async function GET() {
         const reviewsections = await Reviewssections.find(); // Using the AgfenceData model
         /* console.log('collection',Object.keys(mongoose.connection.collections)); */
         /* console.log('Fetched data:', agfencedata); */
+      /*   revalidatePath('api/reviewservice'); */
         return NextResponse.json({ reviewsections })
     } catch (error) {
         console.error('Error fetching data:', error);
