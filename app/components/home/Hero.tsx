@@ -23,10 +23,11 @@ const Hero = async () => {
   const { title, subtitle, description, subDescription, button, link } = hero;
   return (
     <div className="h-[30vh]  sm:h-[500px] w-full justify-center flex items-center sm:justify-start bg-cover   bg-center" style={{ backgroundImage: `url('/assets/home/hero.webp')` }}>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-50"></div> */}
       <div className="sm:w-[50vw] sm:h-[50vh] sm:ml-14 flex sm:items-center sm:justify-center sm:bg-white sm:bg-opacity-70 rounded-lg shadow-md">
         <div className='sm:w-[48vw] flex flex-wrap justify-center'>
-          <h2 className="text-lg text-white text-center sm:text-primary  font-semibold">{subtitle}</h2>
-          <h1 className="text-4xl tex sm:text-4xl text-center text-primary sm:text-black font-bold mt-2 mb-4">{title}</h1>
+        <h2 className="sm:text-lg text-base mt-3 text-white sm:bg-opacity-25 bg-opacity-50 text-center sm:text-primary font-semibold bg-black sm:bg-transparent">{subtitle}</h2>
+          <h1 className="text-xl tex sm:text-4xl text-center text-primary sm:text-black font-bold mt-2 mb-4">{title}</h1>
           <p className="hidden sm:block text-base text-white sm:text-black mb-4">{description}</p>
           <p className="hidden sm:block text-base text-white sm:text-black">{subDescription}</p>
           <Link href={link}>

@@ -67,11 +67,13 @@ export async function generateMetadata(
 const AGFenceReviews = async () => {
     noStore()
     const { reviewsections } = await getReviewsData()
-    const { reviews, legends } = reviewsections[0];
+    
+    const { writteReviewTitle,formTitle, reviews, legends } = reviewsections[0];
+    
     
     return (
 
-        <ReviewsData reviews={reviews} legends={legends} />
+        <ReviewsData writteReviewTitle={writteReviewTitle} formTitle={formTitle} reviews={reviews} legends={legends} />
 
     );
 };

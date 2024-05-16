@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
 
         // After adding, fetch the latest reviews
         const latestReviews = await Reviewssections.findOne({ _id: process.env.ID_REVIEWS_UPDATE_SECTIONS });
-        console.log("🚀 ~ POST ~ latestReviews:", latestReviews)
+       
 
         return NextResponse.json({ message: 'Review added successfully', latestReviews });
         

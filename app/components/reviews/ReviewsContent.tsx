@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import WritteReview from "./WritteReview";
 
 
-const ReviewsData = ({ reviews, legends }: any) => {
+const ReviewsData = ({ reviews, legends, writteReviewTitle, formTitle }: any) => {
     const [reviewsUpdate, setReviewsUpdate] = useState(reviews);
     
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,8 +50,9 @@ const ReviewsData = ({ reviews, legends }: any) => {
     return (
         <>
             <WritteReview
-                writeReviewTitle="Leave us a Review"
+                writeReviewTitle={writteReviewTitle}
                 setReviewsUpdate={setReviewsUpdate}
+                formTitle={formTitle}
             />
 
             <div className="  text-black p-4  2xl:min-h-[60vh] flex justify-center flex-wrap items-center">
