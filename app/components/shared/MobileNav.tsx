@@ -17,7 +17,7 @@ const MobileNav = ({ isOpen, toggleMenu, menuMobile }: any) => {
                     <button className='fixed inset-0 bg-black opacity-50' onClick={toggleMenu} onKeyDown={toggleMenu} tabIndex={0}></button>
                     <div className='relative w-3/5  h-screen flex flex-col  shadow-lg'>
                         <nav className="flex flex-col   justify-start items-center bg-white h-full">
-                            <div className='bg-white w-full flex flex-wrap justify-between items-center mt-4'>
+                            <div className='bg-white w-full flex flex-wrap justify-between items-center mt-14'>
                                 <div className="flex w-1/2 flex-wrap justify-between items-center">
                                     <Link href="/" passHref>
                                         <Image src="/assets/home/logo.webp" alt="AG Fencing Logo" className="w-[90] h-[70] sm:w-[145] sm:h-[90]" width={90} height={70} />
