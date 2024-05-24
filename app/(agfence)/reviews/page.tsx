@@ -1,4 +1,5 @@
 "use server"
+
 import { unstable_noStore as noStore } from 'next/cache';
 import ReviewsData from "@/app/components/reviews/ReviewsContent";
 
@@ -14,7 +15,7 @@ const getReviewsData = async () => {
    
     try {
         const apiUrl = process.env.API_URL;
-        const response = await fetch(`${apiUrl}/api/reviewservice` /* { cache: 'no-store' } *//* { next: { tags: ['reviews'] } } */);
+        const response = await fetch(`${apiUrl}/api/reviewservice`, { cache: 'no-store' }/* { next: { tags: ['reviews'] } } */);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

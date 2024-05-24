@@ -1,6 +1,8 @@
 import connectMongoDB from '@/app/libs/mongodb'
 import { NextRequest, NextResponse } from "next/server";
 import Reviewssections from '@/app/libs/models/reviewsmodel';
+import { submitReview } from '@/app/actions/reviewActions';
+import { revalidatePath } from 'next/cache';
 /* import { revalidatePath } from 'next/cache'; */
 /* import mongoose from 'mongoose'; */
 
@@ -12,6 +14,7 @@ export async function GET() {
         /* console.log('collection',Object.keys(mongoose.connection.collections)); */
         /* console.log('Fetched data:', agfencedata); */
       /*   revalidatePath('api/reviewservice'); */
+      revalidatePath('/reviews');
         return NextResponse.json({ reviewsections })
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -28,34 +31,20 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
     await connectMongoDB(); // Ensure the DB connection is ready
+
     const data = await request.json(); // Get data from the request body
 
     try {
+        const formData = new FormData();
+        Object.keys(data).forEach((key) => {
+            formData.append(key, data[key]);
+        });
 
-        const review = {
-            name: data.name,
-            location: data.location,
-            comment: data.comment,
-            date: new Date(data.date), // Assuming date is correctly formatted
-            rating: data.rating
-        };
+        const reviews = await submitReview(formData);
 
-        // Insert the review at the start of the array
-        await Reviewssections.findByIdAndUpdate(
-            process.env.ID_REVIEWS_UPDATE_SECTIONS,
-            { $push: { reviews: { $each: [review], $position: 0 } } },
-            { new: true }
-        );
-
-        // After adding, fetch the latest reviews
-        const latestReviews = await Reviewssections.findOne({ _id: process.env.ID_REVIEWS_UPDATE_SECTIONS });
-       
-
-        return NextResponse.json({ message: 'Review added successfully', latestReviews });
-        
+        return NextResponse.json({ message: 'Review added successfully', reviews });
     } catch (error) {
         console.error('Error adding review:', error);
         return NextResponse.json({ error: 'Failed to add review' }, { status: 500 });
     }
 }
-

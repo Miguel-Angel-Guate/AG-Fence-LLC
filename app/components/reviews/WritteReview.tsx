@@ -1,112 +1,84 @@
-"use client"
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaStar } from 'react-icons/fa';
 import { Dialog } from '@headlessui/react';
-import moment from 'moment';
-
 
 const WritteReview = ({ writeReviewTitle, setReviewsUpdate }: any) => {
-
     const [hoverRating, setHoverRating] = useState(0);
     const [isReviewOpen, setIsReviewOpen] = useState(false);
     const [isThankYouOpen, setIsThankYouOpen] = useState(false);
-    
-
     const { register, handleSubmit, setValue, watch, reset, formState: { errors } } = useForm();
     const [userName, setUserName] = useState('');
     const rating = watch("rating");
-
 
     const handleRating = (rate: any) => {
         setValue("rating", rate);
     };
 
-
-    const submitReview = async (data: any) => {
-
-        setUserName(data.name.charAt(0).toUpperCase() + data.name.slice(1))
-        const formattedData = {
-            ...data,
-            date: moment(data.date).format('YYYY-MM-DD') // assuming 'data.date' comes from a date picker or similar input
-        };
-        
-
+    const submitReviewHandler = async (data: any) => {
+        setUserName(data.name.charAt(0).toUpperCase() + data.name.slice(1));
         try {
             const response = await fetch('/api/reviewservice', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formattedData)
+                body: JSON.stringify(data),
             });
 
-            const reviews = await response.json();
-            
             if (response.ok) {
-                setReviewsUpdate([...reviews.latestReviews.reviews]);
-                reset()
-                setIsThankYouOpen(true); // Open thank you dialog
-                setIsReviewOpen(false); // Close review dialog
+                const result = await response.json();
+                setReviewsUpdate(result.reviews);
                 reset();
-                
+                setIsThankYouOpen(true);
+                setIsReviewOpen(false);
             } else {
-                throw new Error('Submission failed');
+                throw new Error('Failed to submit review');
             }
-            // Handle state update or actions after submission
         } catch (error) {
             console.error('Failed to submit review:', error);
-        };
-       
-    }
-
-
+        }
+    };
 
     return (
         <>
-
-
-            <button className="text-sm bg-primary py-1 text-white  ml-2 mt-2 px-3 rounded-full" onClick={() => setIsReviewOpen(true)}>Leave us a Review</button>
+            <button className="text-sm bg-primary py-1 text-white ml-2 mt-2 px-3 rounded-full" onClick={() => setIsReviewOpen(true)}>Leave us a Review</button>
             <Dialog open={isReviewOpen} onClose={() => setIsReviewOpen(false)} className="fixed inset-0 z-10 overflow-y-auto">
                 <div className="fixed inset-0 bg-black bg-opacity-50" aria-hidden="true"></div>
                 <div className="flex items-center justify-center min-h-screen px-4">
                     <Dialog.Panel className="w-full max-w-2xl p-6 mx-auto bg-white rounded-lg shadow-lg z-20">
                         <Dialog.Title className="text-lg font-bold">{writeReviewTitle}</Dialog.Title>
-
-                        <form onSubmit={handleSubmit(submitReview)} className="mt-4 flex flex-wrap w-full flex-col justify-between">
-                            
+                        <form onSubmit={handleSubmit(submitReviewHandler)} className="mt-4 flex flex-wrap w-full flex-col justify-between">
                             <input
                                 className="input border-solid border-2 border-primary min-w-44 w-full"
                                 {...register("name", { required: true })}
-                                placeholder=" Your name"
+                                placeholder="Your name"
                                 onChange={(e) => {
                                     const { value } = e.target;
                                     setValue("name", value.charAt(0).toUpperCase() + value.slice(1));
                                 }}
                             />
                             {errors.name && <p className="text-red-500">Name is needed</p>}
-                            
                             <input
                                 className="input mt-3 border-solid border-2 border-primary w-full"
                                 {...register("location", { required: true })}
-                                placeholder=" Your location"
+                                placeholder="Your location"
                                 onChange={(e) => {
                                     const { value } = e.target;
                                     setValue("location", value.charAt(0).toUpperCase() + value.slice(1));
                                 }}
                             />
-                            {errors.location && <p className="text-red-500">is needed</p>}
+                            {errors.location && <p className="text-red-500">Location is needed</p>}
                             <textarea
                                 className="textarea mt-4 border-solid border-2 border-primary w-full"
                                 {...register("comment", { required: true })}
-                                placeholder=" Review"
+                                placeholder="Review"
                                 onChange={(e) => {
                                     const { value } = e.target;
                                     setValue("comment", value.charAt(0).toUpperCase() + value.slice(1));
                                 }}
-                                
                             />
-                            {errors.comment && <p className="text-red-500">is needed</p>}
+                            {errors.comment && <p className="text-red-500">Comment is needed</p>}
                             <div className="flex my-4">
                                 {Array.from({ length: 5 }, (_, index) => (
                                     <FaStar
@@ -126,9 +98,8 @@ const WritteReview = ({ writeReviewTitle, setReviewsUpdate }: any) => {
                     </Dialog.Panel>
                 </div>
             </Dialog>
-
             <Dialog open={isThankYouOpen} onClose={() => setIsThankYouOpen(false)} className="fixed inset-0 z-50 overflow-y-auto">
-                <div className="fixed inset-0 bg-black bg-opacity-20" aria-hidden="true"></div> {/* Increase opacity for darker background */}
+                <div className="fixed inset-0 bg-black bg-opacity-20" aria-hidden="true"></div>
                 <div className="flex items-center justify-center min-h-screen">
                     <Dialog.Panel className="w-full max-w-md p-6 bg-white z-50 rounded-lg shadow-lg">
                         <Dialog.Title className="text-lg font-bold">Thank you!</Dialog.Title>
@@ -137,10 +108,8 @@ const WritteReview = ({ writeReviewTitle, setReviewsUpdate }: any) => {
                     </Dialog.Panel>
                 </div>
             </Dialog>
-
-
         </>
     );
-}
+};
 
 export default WritteReview;
