@@ -66,7 +66,7 @@ const WritteReview = ({ writeReviewTitle, setReviewsUpdate }: any) => {
         <>
 
 
-            <button onClick={() => setIsReviewOpen(true)}>Leave us a Review</button>
+            <button className="text-sm bg-primary py-1 text-white  ml-2 mt-2 px-3 rounded-full" onClick={() => setIsReviewOpen(true)}>Leave us a Review</button>
             <Dialog open={isReviewOpen} onClose={() => setIsReviewOpen(false)} className="fixed inset-0 z-10 overflow-y-auto">
                 <div className="fixed inset-0 bg-black bg-opacity-50" aria-hidden="true"></div>
                 <div className="flex items-center justify-center min-h-screen px-4">
